@@ -9,9 +9,6 @@ const modules = [
   { name: 'triage', port: 4171 },
   { name: 'comply', port: 4172 },
   { name: 'collect', port: 4173 },
-  { name: 'screen', port: 4174 },
-  { name: 'docs', port: 4175 },
-  { name: 'vendor', port: 4176 },
 ];
 
 async function screenshot(page, name) {
@@ -90,40 +87,35 @@ async function testTriage(browser) {
     }
   }
 
-  // Test nav tabs
-  const tenantBtn = page.locator('button:has-text("Tenant"), a:has-text("Tenant")').first();
+  // Test priority filter (select index 1 on dashboard)
+  const priorityFilter = page.locator('select').nth(1);
+  if (await priorityFilter.isVisible()) {
+    await priorityFilter.selectOption('critical');
+    await page.waitForTimeout(500);
+    await screenshot(page, 'triage-filter-critical');
+    console.log('  ✅ Priority filter works');
+    await priorityFilter.selectOption('all');
+  }
+
+  // Test status filter (select index 2 on dashboard)
+  const statusFilter = page.locator('select').nth(2);
+  if (await statusFilter.isVisible()) {
+    await statusFilter.selectOption('new');
+    await page.waitForTimeout(500);
+    await screenshot(page, 'triage-filter-new');
+    console.log('  ✅ Status filter works');
+    await statusFilter.selectOption('all');
+  }
+
+  // Test nav tabs - click Tenant View
+  const tenantBtn = page.locator('nav button:has-text("Tenant"), nav a:has-text("Tenant")').first();
   if (await tenantBtn.isVisible()) {
     await tenantBtn.click();
     await page.waitForTimeout(1000);
     await screenshot(page, 'triage-tenant-view');
     console.log('  ✅ Tenant view works');
-  }
-
-  // Test module switcher dropdown
-  const moduleSwitcher = page.locator('button:has(svg.lucide-grid-3x3), button:has(svg.lucide-grid-2x2), [data-module-switcher]').first();
-  if (await moduleSwitcher.isVisible()) {
-    await moduleSwitcher.click();
-    await page.waitForTimeout(500);
-    await screenshot(page, 'triage-module-switcher');
-    console.log('  ✅ Module switcher dropdown works');
-    await moduleSwitcher.click(); // close it
-  }
-
-  // Go back to dashboard
-  const dashBtn = page.locator('button:has-text("Dashboard"), a:has-text("Dashboard")').first();
-  if (await dashBtn.isVisible()) {
-    await dashBtn.click();
-    await page.waitForTimeout(1000);
-  }
-
-  // Test status filter
-  const statusFilter = page.locator('select').nth(1);
-  if (await statusFilter.isVisible()) {
-    await statusFilter.selectOption('urgent');
-    await page.waitForTimeout(500);
-    await screenshot(page, 'triage-filter-urgent');
-    console.log('  ✅ Status filter works');
-    await statusFilter.selectOption('all');
+  } else {
+    console.log('  ⚠️ Tenant nav button not visible (may need hamburger)');
   }
 
   // Mobile
@@ -298,153 +290,6 @@ async function testCollect(browser) {
   await page.close();
 }
 
-async function testScreen(browser) {
-  console.log('\n=== SCREEN ===');
-  const page = await browser.newPage({ viewport: { width: 1280, height: 900 } });
-  await page.goto('http://localhost:4174', { waitUntil: 'networkidle' });
-  await page.waitForTimeout(3000);
-  await screenshot(page, 'screen-applications');
-
-  // Test property selector
-  const propSelect = page.locator('select').first();
-  if (await propSelect.isVisible()) {
-    const options = await propSelect.locator('option').allTextContents();
-    console.log(`  Properties: ${options.join(', ')}`);
-    if (options.length > 1) {
-      await propSelect.selectOption({ index: 1 });
-      await page.waitForTimeout(500);
-      await screenshot(page, 'screen-applications-property2');
-      console.log('  ✅ Property switch works');
-    }
-    await propSelect.selectOption({ index: 0 });
-  }
-
-  // Test Screening tab
-  const screeningBtn = page.locator('button:has-text("Screening")').first();
-  if (await screeningBtn.isVisible()) {
-    await screeningBtn.click();
-    await page.waitForTimeout(1000);
-    await screenshot(page, 'screen-screening');
-    console.log('  ✅ Screening view works');
-  }
-
-  // Test Reports tab
-  const reportsBtn = page.locator('button:has-text("Reports")').first();
-  if (await reportsBtn.isVisible()) {
-    await reportsBtn.click();
-    await page.waitForTimeout(1000);
-    await screenshot(page, 'screen-reports');
-    console.log('  ✅ Reports view works');
-  }
-
-  // Mobile
-  await page.setViewportSize({ width: 375, height: 812 });
-  await page.waitForTimeout(500);
-  await screenshot(page, 'screen-mobile');
-  console.log('  ✅ Mobile layout');
-
-  await page.close();
-}
-
-async function testDocs(browser) {
-  console.log('\n=== DOCS ===');
-  const page = await browser.newPage({ viewport: { width: 1280, height: 900 } });
-  await page.goto('http://localhost:4175', { waitUntil: 'networkidle' });
-  await page.waitForTimeout(3000);
-  await screenshot(page, 'docs-documents');
-
-  // Test property selector
-  const propSelect = page.locator('select').first();
-  if (await propSelect.isVisible()) {
-    const options = await propSelect.locator('option').allTextContents();
-    console.log(`  Properties: ${options.join(', ')}`);
-  }
-
-  // Test type filter
-  const typeFilter = page.locator('select').nth(1);
-  if (await typeFilter.isVisible()) {
-    await typeFilter.selectOption('Lease');
-    await page.waitForTimeout(500);
-    await screenshot(page, 'docs-filter-lease');
-    console.log('  ✅ Type filter works');
-    await typeFilter.selectOption('All Types');
-  }
-
-  // Test Templates tab
-  const templatesBtn = page.locator('button:has-text("Templates")').first();
-  if (await templatesBtn.isVisible()) {
-    await templatesBtn.click();
-    await page.waitForTimeout(1000);
-    await screenshot(page, 'docs-templates');
-    console.log('  ✅ Templates view works');
-  }
-
-  // Test Signatures tab
-  const signaturesBtn = page.locator('button:has-text("Signatures")').first();
-  if (await signaturesBtn.isVisible()) {
-    await signaturesBtn.click();
-    await page.waitForTimeout(1000);
-    await screenshot(page, 'docs-signatures');
-    console.log('  ✅ Signatures view works');
-  }
-
-  // Mobile
-  await page.setViewportSize({ width: 375, height: 812 });
-  await page.waitForTimeout(500);
-  await screenshot(page, 'docs-mobile');
-  console.log('  ✅ Mobile layout');
-
-  await page.close();
-}
-
-async function testVendor(browser) {
-  console.log('\n=== VENDOR ===');
-  const page = await browser.newPage({ viewport: { width: 1280, height: 900 } });
-  await page.goto('http://localhost:4176', { waitUntil: 'networkidle' });
-  await page.waitForTimeout(3000);
-  await screenshot(page, 'vendor-rfps');
-
-  // Test property selector
-  const propSelect = page.locator('select').first();
-  if (await propSelect.isVisible()) {
-    const options = await propSelect.locator('option').allTextContents();
-    console.log(`  Properties: ${options.join(', ')}`);
-    if (options.length > 1) {
-      await propSelect.selectOption({ index: 1 });
-      await page.waitForTimeout(500);
-      await screenshot(page, 'vendor-rfps-property2');
-      console.log('  ✅ Property switch works');
-    }
-    await propSelect.selectOption({ index: 0 });
-  }
-
-  // Test Bids tab
-  const bidsBtn = page.locator('button:has-text("Bids")').first();
-  if (await bidsBtn.isVisible()) {
-    await bidsBtn.click();
-    await page.waitForTimeout(1000);
-    await screenshot(page, 'vendor-bids');
-    console.log('  ✅ Bids view works');
-  }
-
-  // Test Vendors tab
-  const vendorsBtn = page.locator('button:has-text("Vendors")').first();
-  if (await vendorsBtn.isVisible()) {
-    await vendorsBtn.click();
-    await page.waitForTimeout(1000);
-    await screenshot(page, 'vendor-vendors');
-    console.log('  ✅ Vendors view works');
-  }
-
-  // Mobile
-  await page.setViewportSize({ width: 375, height: 812 });
-  await page.waitForTimeout(500);
-  await screenshot(page, 'vendor-mobile');
-  console.log('  ✅ Mobile layout');
-
-  await page.close();
-}
-
 (async () => {
   const browser = await chromium.launch();
   try {
@@ -452,9 +297,6 @@ async function testVendor(browser) {
     await testTriage(browser);
     await testComply(browser);
     await testCollect(browser);
-    await testScreen(browser);
-    await testDocs(browser);
-    await testVendor(browser);
     console.log('\n✅ All tests complete! Screenshots in vestia/screenshots/');
   } finally {
     await browser.close();

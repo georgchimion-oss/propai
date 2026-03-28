@@ -4,9 +4,9 @@ const modules = [
   { name: 'Triage', url: 'https://triage.georg.miami', live: true },
   { name: 'Comply', url: 'https://comply.georg.miami', live: true },
   { name: 'Collect', url: 'https://collect.georg.miami', live: true },
-  { name: 'Screen', url: '', live: false },
-  { name: 'Docs', url: '', live: false },
-  { name: 'Vendor', url: '', live: false },
+  { name: 'Screen', url: 'https://screen.georg.miami', live: true },
+  { name: 'Docs', url: 'https://vestiadocs.georg.miami', live: true },
+  { name: 'Vendor', url: 'https://vendor.georg.miami', live: true },
 ];
 
 const Navbar = () => {
@@ -42,7 +42,7 @@ const Navbar = () => {
               <svg className={`w-3.5 h-3.5 transition-transform ${modulesOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
             </button>
             {modulesOpen && (
-              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-56 bg-card/95 backdrop-blur-xl border border-border rounded-xl shadow-2xl shadow-black/30 py-2 animate-fade-in">
+              <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-56"><div className="bg-card/95 backdrop-blur-xl border border-border rounded-xl shadow-2xl shadow-black/30 py-2 animate-fade-in">
                 {modules.map((mod) => (
                   <a
                     key={mod.name}
@@ -61,7 +61,7 @@ const Navbar = () => {
                     )}
                   </a>
                 ))}
-              </div>
+              </div></div>
             )}
           </div>
 

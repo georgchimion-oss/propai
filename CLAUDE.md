@@ -32,13 +32,13 @@ The opportunity: Property management scores 27/30 on PwC's AI Disruption Index f
 
 | # | Module | Subdomain | VPS Path | Status |
 |---|--------|-----------|----------|--------|
-| 0 | **Hub** | vestia.georg.miami | /var/www/sites/vestia/ | Ready to deploy |
-| 1 | **Vestia Triage** | triage.georg.miami | /var/www/sites/triage/ | Next to build |
-| 2 | **Vestia Comply** | comply.georg.miami | /var/www/sites/comply/ | Planned |
-| 3 | **Vestia Collect** | collect.georg.miami | /var/www/sites/collect/ | Planned |
-| 4 | **Vestia Screen** | screen.georg.miami | /var/www/sites/screen/ | Planned |
-| 5 | **Vestia Docs** | vestiadocs.georg.miami | /var/www/sites/vestiadocs/ | Planned |
-| 6 | **Vestia Vendor** | vendor.georg.miami | /var/www/sites/vendor/ | Planned |
+| 0 | **Hub** | vestia.georg.miami | /var/www/sites/vestia/ | LIVE |
+| 1 | **Vestia Triage** | triage.georg.miami | /var/www/sites/triage/ | LIVE |
+| 2 | **Vestia Comply** | comply.georg.miami | /var/www/sites/comply/ | LIVE |
+| 3 | **Vestia Collect** | collect.georg.miami | /var/www/sites/collect/ | LIVE |
+| 4 | **Vestia Screen** | screen.georg.miami | /var/www/sites/screen/ | LIVE |
+| 5 | **Vestia Docs** | vestiadocs.georg.miami | /var/www/sites/vestiadocs/ | LIVE |
+| 6 | **Vestia Vendor** | vendor.georg.miami | /var/www/sites/vendor/ | LIVE |
 
 ## Module Descriptions
 

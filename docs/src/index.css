@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-sans: 'DM Sans', sans-serif;
+
+  --color-background: oklch(0.13 0.01 280);
+  --color-foreground: oklch(0.97 0.01 90);
+  --color-card: oklch(0.16 0.01 280);
+  --color-navy-deep: oklch(0.13 0.01 280);
+  --color-navy-mid: oklch(0.15 0.01 280);
+  --color-gold: oklch(0.74 0.09 75);
+  --color-gold-bright: oklch(0.79 0.09 78);
+  --color-teal: oklch(0.81 0.13 175);
+  --color-red: oklch(0.63 0.21 25);
+  --color-orange: oklch(0.72 0.17 55);
+  --color-green: oklch(0.72 0.17 155);
+  --color-muted: oklch(0.55 0.01 260);
+  --color-muted-fg: oklch(0.62 0.01 260);
+  --color-border: oklch(1 0 0 / 0.08);
+  --color-blue: oklch(0.65 0.15 250);
+}
+
+* {
+  border-color: var(--color-border);
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+}
+
+.bg-glass {
+  background-color: oklch(1 0 0 / 0.03);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.gradient-gold {
+  background: linear-gradient(135deg, #c9a96e, #d4b87a);
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.5); }
+}
+
+.animate-pulse-dot {
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+@keyframes typing {
+  0% { opacity: 0.3; }
+  50% { opacity: 1; }
+  100% { opacity: 0.3; }
+}
+
+.typing-dot {
+  animation: typing 1.4s ease-in-out infinite;
+}
+.typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: oklch(1 0 0 / 0.1);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: oklch(1 0 0 / 0.15);
+}
+
+/* Select dropdown styling */
+select option {
+  background-color: oklch(0.16 0.01 280);
+  color: oklch(0.97 0.01 90);
+}

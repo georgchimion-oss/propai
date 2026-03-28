@@ -40,6 +40,7 @@ const modules = [
     bgColor: 'bg-purple-400/5',
     icon: UserCheck,
     tags: ['Background checks', 'Credit scoring', 'Auto-approval'],
+    url: 'https://screen.georg.miami',
   },
   {
     name: 'Vestia Docs',
@@ -49,6 +50,7 @@ const modules = [
     bgColor: 'bg-blue-400/5',
     icon: FileText,
     tags: ['AI drafting', 'E-signatures', 'Version control'],
+    url: 'https://vestiadocs.georg.miami',
   },
   {
     name: 'Vestia Vendor',
@@ -58,6 +60,7 @@ const modules = [
     bgColor: 'bg-orange-400/5',
     icon: Users,
     tags: ['RFP automation', 'Bid scoring', 'Contract mgmt'],
+    url: 'https://vendor.georg.miami',
   },
 ];
 
