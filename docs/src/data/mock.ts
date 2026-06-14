@@ -11,7 +11,7 @@ export const documents: Document[] = [
   {
     id: 'bay-001',
     propertyId: 'bayshore',
-    name: 'Lease Agreement — Unit 14B (Ramirez)',
+    name: 'Lease Agreement, Unit 14B (Ramirez)',
     type: 'Lease',
     status: 'Active',
     lastModified: '2025-11-15',
@@ -23,7 +23,7 @@ export const documents: Document[] = [
   {
     id: 'bay-002',
     propertyId: 'bayshore',
-    name: 'Lease Agreement — Unit 7A (Chen)',
+    name: 'Lease Agreement, Unit 7A (Chen)',
     type: 'Lease',
     status: 'Active',
     lastModified: '2025-10-03',
@@ -35,7 +35,7 @@ export const documents: Document[] = [
   {
     id: 'bay-003',
     propertyId: 'bayshore',
-    name: 'Pet Policy Amendment — Unit 14B',
+    name: 'Pet Policy Amendment, Unit 14B',
     type: 'Amendment',
     status: 'Active',
     lastModified: '2025-11-20',
@@ -47,7 +47,7 @@ export const documents: Document[] = [
   {
     id: 'bay-004',
     propertyId: 'bayshore',
-    name: 'Late Payment Notice — Unit 22C (Torres)',
+    name: 'Late Payment Notice, Unit 22C (Torres)',
     type: 'Notice',
     status: 'Active',
     lastModified: '2026-03-10',
@@ -59,7 +59,7 @@ export const documents: Document[] = [
   {
     id: 'bay-005',
     propertyId: 'bayshore',
-    name: 'Board Meeting Minutes — February 2026',
+    name: 'Board Meeting Minutes, February 2026',
     type: 'Meeting Minutes',
     status: 'Archived',
     lastModified: '2026-02-18',
@@ -92,7 +92,7 @@ export const documents: Document[] = [
   {
     id: 'bay-008',
     propertyId: 'bayshore',
-    name: 'Lease Renewal Offer — Unit 31D (Nakamura)',
+    name: 'Lease Renewal Offer, Unit 31D (Nakamura)',
     type: 'Lease',
     status: 'Pending Signature',
     lastModified: '2026-03-15',
@@ -106,7 +106,7 @@ export const documents: Document[] = [
   {
     id: 'coc-001',
     propertyId: 'coconut',
-    name: 'Lease Agreement — Unit 5B (Morrison)',
+    name: 'Lease Agreement, Unit 5B (Morrison)',
     type: 'Lease',
     status: 'Active',
     lastModified: '2025-09-01',
@@ -118,7 +118,7 @@ export const documents: Document[] = [
   {
     id: 'coc-002',
     propertyId: 'coconut',
-    name: 'Board Meeting Minutes — March 2026',
+    name: 'Board Meeting Minutes, March 2026',
     type: 'Meeting Minutes',
     status: 'Draft',
     lastModified: '2026-03-20',
@@ -129,7 +129,7 @@ export const documents: Document[] = [
   {
     id: 'coc-003',
     propertyId: 'coconut',
-    name: 'Violation Notice — Unit 12A (Gutierrez)',
+    name: 'Violation Notice, Unit 12A (Gutierrez)',
     type: 'Notice',
     status: 'Active',
     lastModified: '2026-03-05',
@@ -152,7 +152,7 @@ export const documents: Document[] = [
   {
     id: 'coc-005',
     propertyId: 'coconut',
-    name: 'Pet Policy Amendment — Unit 5B',
+    name: 'Pet Policy Amendment, Unit 5B',
     type: 'Amendment',
     status: 'Pending Signature',
     lastModified: '2026-03-18',
@@ -166,7 +166,7 @@ export const documents: Document[] = [
   {
     id: 'sun-001',
     propertyId: 'sunridge',
-    name: 'Lease Agreement — Unit 101 (Patel)',
+    name: 'Lease Agreement, Unit 101 (Patel)',
     type: 'Lease',
     status: 'Active',
     lastModified: '2025-08-15',
@@ -178,7 +178,7 @@ export const documents: Document[] = [
   {
     id: 'sun-002',
     propertyId: 'sunridge',
-    name: 'Lease Agreement — Unit 215 (Walker)',
+    name: 'Lease Agreement, Unit 215 (Walker)',
     type: 'Lease',
     status: 'Expired',
     lastModified: '2025-03-01',
@@ -201,7 +201,7 @@ export const documents: Document[] = [
   {
     id: 'sun-004',
     propertyId: 'sunridge',
-    name: 'Late Payment Notice — Unit 312 (Davis)',
+    name: 'Late Payment Notice, Unit 312 (Davis)',
     type: 'Notice',
     status: 'Active',
     lastModified: '2026-03-12',
@@ -213,7 +213,7 @@ export const documents: Document[] = [
   {
     id: 'sun-005',
     propertyId: 'sunridge',
-    name: 'Board Meeting Minutes — January 2026',
+    name: 'Board Meeting Minutes, January 2026',
     type: 'Meeting Minutes',
     status: 'Archived',
     lastModified: '2026-01-22',
@@ -235,7 +235,7 @@ export const documents: Document[] = [
   {
     id: 'sun-007',
     propertyId: 'sunridge',
-    name: 'Move-In Agreement — Unit 215 (Flores)',
+    name: 'Move-In Agreement, Unit 215 (Flores)',
     type: 'Amendment',
     status: 'Pending Signature',
     lastModified: '2026-03-24',
@@ -318,7 +318,7 @@ export const signatureRecords: SignatureRecord[] = [
   {
     id: 'sig-001',
     propertyId: 'bayshore',
-    documentName: 'Lease Renewal Offer — Unit 31D (Nakamura)',
+    documentName: 'Lease Renewal Offer, Unit 31D (Nakamura)',
     signerName: 'Hana Nakamura',
     signerEmail: 'h.nakamura@email.com',
     sentDate: '2026-03-15',
@@ -329,7 +329,7 @@ export const signatureRecords: SignatureRecord[] = [
   {
     id: 'sig-002',
     propertyId: 'bayshore',
-    documentName: 'Pet Policy Amendment — Unit 14B',
+    documentName: 'Pet Policy Amendment, Unit 14B',
     signerName: 'Marcus Ramirez',
     signerEmail: 'm.ramirez@email.com',
     sentDate: '2026-03-20',
@@ -352,7 +352,7 @@ export const signatureRecords: SignatureRecord[] = [
   {
     id: 'sig-004',
     propertyId: 'coconut',
-    documentName: 'Pet Policy Amendment — Unit 5B',
+    documentName: 'Pet Policy Amendment, Unit 5B',
     signerName: 'James Morrison',
     signerEmail: 'j.morrison@email.com',
     sentDate: '2026-03-18',
@@ -363,7 +363,7 @@ export const signatureRecords: SignatureRecord[] = [
   {
     id: 'sig-005',
     propertyId: 'coconut',
-    documentName: 'Board Meeting Minutes — March 2026',
+    documentName: 'Board Meeting Minutes, March 2026',
     signerName: 'Patricia Abreu (Manager)',
     signerEmail: 'p.abreu@coconutgrove.hoa',
     sentDate: '2026-03-20',
@@ -373,7 +373,7 @@ export const signatureRecords: SignatureRecord[] = [
   {
     id: 'sig-006',
     propertyId: 'coconut',
-    documentName: 'Lease Renewal — Unit 9C (Fleming)',
+    documentName: 'Lease Renewal, Unit 9C (Fleming)',
     signerName: 'Rachel Fleming',
     signerEmail: 'r.fleming@email.com',
     sentDate: '2026-03-01',
@@ -386,7 +386,7 @@ export const signatureRecords: SignatureRecord[] = [
   {
     id: 'sig-007',
     propertyId: 'sunridge',
-    documentName: 'Move-In Agreement — Unit 215 (Flores)',
+    documentName: 'Move-In Agreement, Unit 215 (Flores)',
     signerName: 'Isabel Flores',
     signerEmail: 'i.flores@email.com',
     sentDate: '2026-03-24',
@@ -397,7 +397,7 @@ export const signatureRecords: SignatureRecord[] = [
   {
     id: 'sig-008',
     propertyId: 'sunridge',
-    documentName: 'Lease Agreement — Unit 101 (Patel)',
+    documentName: 'Lease Agreement, Unit 101 (Patel)',
     signerName: 'Raj Patel',
     signerEmail: 'r.patel@email.com',
     sentDate: '2025-08-15',
@@ -408,7 +408,7 @@ export const signatureRecords: SignatureRecord[] = [
   {
     id: 'sig-009',
     propertyId: 'sunridge',
-    documentName: 'Board Resolution — Elevator Modernization',
+    documentName: 'Board Resolution, Elevator Modernization',
     signerName: 'Diana Mendes (Board Chair)',
     signerEmail: 'd.mendes@sunridge.hoa',
     sentDate: '2026-03-10',

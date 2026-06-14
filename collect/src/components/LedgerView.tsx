@@ -68,7 +68,7 @@ export function LedgerView({ selectedProperty, onPropertyChange }: Props) {
         {/* Tenant List */}
         <div ref={listRef} className="lg:col-span-1 bg-card border border-border rounded-2xl overflow-hidden h-fit">
           <div className="p-3 border-b border-border space-y-2">
-            <div className="flex items-center gap-2 bg-white/5 rounded-xl px-3 py-2 border border-border">
+            <div className="flex items-center gap-2 bg-black/5 rounded-xl px-3 py-2 border border-border">
               <Search className="w-4 h-4 text-muted" />
               <input
                 type="text"
@@ -83,7 +83,7 @@ export function LedgerView({ selectedProperty, onPropertyChange }: Props) {
               <select
                 value={statusFilter}
                 onChange={(e) => setStatusFilter(e.target.value as FilterStatus)}
-                className="bg-white/5 border border-border rounded-lg px-2 py-1 text-xs text-foreground outline-none cursor-pointer"
+                className="bg-black/5 border border-border rounded-lg px-2 py-1 text-xs text-foreground outline-none cursor-pointer"
               >
                 <option value="all">All</option>
                 <option value="paid">Paid</option>
@@ -101,7 +101,7 @@ export function LedgerView({ selectedProperty, onPropertyChange }: Props) {
                 <button
                   key={t.id}
                   onClick={() => setSelectedTenant(t.id)}
-                  className={`w-full p-3 text-left hover:bg-white/[0.02] transition-colors flex items-center gap-3 ${selectedTenant === t.id ? 'bg-white/[0.03] border-l-2 border-l-green' : ''}`}
+                  className={`w-full p-3 text-left hover:bg-black/[0.025] transition-colors flex items-center gap-3 ${selectedTenant === t.id ? 'bg-black/[0.03] border-l-2 border-l-green' : ''}`}
                 >
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2">
@@ -110,7 +110,7 @@ export function LedgerView({ selectedProperty, onPropertyChange }: Props) {
                         {statusLabels[t.status]}
                       </span>
                     </div>
-                    <span className="text-[10px] text-muted">{t.building} — {t.unit}</span>
+                    <span className="text-[10px] text-muted">{t.building}, {t.unit}</span>
                   </div>
                   <div className="text-right flex-shrink-0">
                     <p className={`text-xs font-semibold ${t.balance > 0 ? 'text-red' : 'text-green'}`}>
@@ -134,7 +134,7 @@ export function LedgerView({ selectedProperty, onPropertyChange }: Props) {
                   <div>
                     <h2 className="font-serif text-xl font-semibold text-foreground">{selected.name}</h2>
                     <div className="flex items-center gap-3 mt-1 text-xs text-muted-fg">
-                      <span className="flex items-center gap-1"><Building2 className="w-3 h-3" /> {selected.building} — Unit {selected.unit}</span>
+                      <span className="flex items-center gap-1"><Building2 className="w-3 h-3" /> {selected.building}, Unit {selected.unit}</span>
                       <span className="flex items-center gap-1"><Calendar className="w-3 h-3" /> Since {new Date(selected.leaseStart).toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}</span>
                     </div>
                   </div>
@@ -144,23 +144,23 @@ export function LedgerView({ selectedProperty, onPropertyChange }: Props) {
                 </div>
 
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                  <div className="p-3 rounded-xl bg-white/[0.02] border border-border">
+                  <div className="p-3 rounded-xl bg-black/[0.025] border border-border">
                     <p className="text-[10px] text-muted uppercase tracking-wider">Monthly Rent</p>
                     <p className="text-lg font-serif font-semibold text-foreground mt-1">${selected.monthlyRent.toLocaleString()}</p>
                   </div>
-                  <div className="p-3 rounded-xl bg-white/[0.02] border border-border">
+                  <div className="p-3 rounded-xl bg-black/[0.025] border border-border">
                     <p className="text-[10px] text-muted uppercase tracking-wider">Balance</p>
                     <p className={`text-lg font-serif font-semibold mt-1 ${selected.balance > 0 ? 'text-red' : 'text-green'}`}>
                       ${selected.balance.toLocaleString()}
                     </p>
                   </div>
-                  <div className="p-3 rounded-xl bg-white/[0.02] border border-border">
+                  <div className="p-3 rounded-xl bg-black/[0.025] border border-border">
                     <p className="text-[10px] text-muted uppercase tracking-wider">Last Payment</p>
                     <p className="text-sm font-medium text-foreground mt-1">
-                      {selected.lastPayment ? new Date(selected.lastPayment).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) : '—'}
+                      {selected.lastPayment ? new Date(selected.lastPayment).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) : '-'}
                     </p>
                   </div>
-                  <div className="p-3 rounded-xl bg-white/[0.02] border border-border">
+                  <div className="p-3 rounded-xl bg-black/[0.025] border border-border">
                     <p className="text-[10px] text-muted uppercase tracking-wider">Contact</p>
                     <div className="mt-1 space-y-0.5">
                       <p className="text-[10px] text-foreground flex items-center gap-1"><Mail className="w-2.5 h-2.5" /> {selected.email}</p>
@@ -171,7 +171,7 @@ export function LedgerView({ selectedProperty, onPropertyChange }: Props) {
 
                 {selected.paymentPlan && (
                   <div className="mt-3 p-3 rounded-xl bg-teal/5 border border-teal/15">
-                    <p className="text-xs text-teal font-medium">Active Payment Plan — $1,350/mo until balance cleared</p>
+                    <p className="text-xs text-teal font-medium">Active Payment Plan, $1,350/mo until balance cleared</p>
                   </div>
                 )}
               </div>
@@ -182,7 +182,7 @@ export function LedgerView({ selectedProperty, onPropertyChange }: Props) {
                 {selectedPayments.length > 0 ? (
                   <div className="space-y-2">
                     {selectedPayments.map((p) => (
-                      <div key={p.id} className="flex items-center gap-3 p-3 rounded-xl bg-white/[0.02] border border-border">
+                      <div key={p.id} className="flex items-center gap-3 p-3 rounded-xl bg-black/[0.025] border border-border">
                         <div className="w-8 h-8 rounded-lg bg-green/10 border border-green/20 flex items-center justify-center">
                           <DollarSign className="w-3.5 h-3.5 text-green" />
                         </div>

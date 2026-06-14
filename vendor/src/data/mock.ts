@@ -399,7 +399,7 @@ export const bids: Bid[] = [
     insuranceVerified: true,
     licensed: true,
     aiScore: 64,
-    aiReasoning: 'Outside core specialty — painting contractor bidding on roofing work. Significantly higher price with no roofing-specific warranty terms provided.',
+    aiReasoning: 'Outside core specialty, painting contractor bidding on roofing work. Significantly higher price with no roofing-specific warranty terms provided.',
     vendorRating: 4.3,
     submittedDate: '2026-03-12',
     notes: 'Our waterproofing division handles commercial roofing. 7-year warranty.',
@@ -586,7 +586,7 @@ export const bids: Bid[] = [
     aiReasoning: 'Lower price with longer timeline. 4.1 rating is acceptable. Fewer completed jobs than competitor but credentials are in order. Good backup option.',
     vendorRating: 4.1,
     submittedDate: '2026-03-20',
-    notes: 'Insurance renewal pending — certificate valid through May 2026.',
+    notes: 'Insurance renewal pending, certificate valid through May 2026.',
     recommended: false,
   },
 

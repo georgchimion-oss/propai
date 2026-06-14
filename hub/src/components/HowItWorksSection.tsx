@@ -6,7 +6,7 @@ const steps = [
   {
     icon: Smartphone,
     label: 'Report',
-    desc: 'Tenant submits issue via text, email, or app — any channel, any time.',
+    desc: 'Tenant submits issue via text, email, or app, any channel, any time.',
   },
   {
     icon: Brain,
@@ -16,7 +16,7 @@ const steps = [
   {
     icon: CheckCircle,
     label: 'Resolve',
-    desc: 'Vendor dispatched, work tracked, tenant updated — all in one loop.',
+    desc: 'Vendor dispatched, work tracked, tenant updated, all in one loop.',
   },
 ];
 
@@ -28,7 +28,7 @@ const HowItWorksSection = () => {
       {/* Background */}
       <div className="absolute inset-0">
         <img src={howItWorksBg} alt="" className="w-full h-full object-cover opacity-20" />
-        <div className="absolute inset-0 bg-background/80" />
+        <div className="absolute inset-0 bg-background/40" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">

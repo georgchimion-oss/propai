@@ -110,16 +110,16 @@ export function OverviewView({ selectedProperty, onPropertyChange }: Props) {
           <div className="flex items-center gap-3 bg-card border border-border rounded-xl p-3 sm:p-4">
             <div className="relative w-14 h-14">
               <svg viewBox="0 0 56 56" className="w-14 h-14 -rotate-90">
-                <circle cx="28" cy="28" r="24" fill="none" stroke="oklch(1 0 0 / 0.05)" strokeWidth="4" />
+                <circle cx="28" cy="28" r="24" fill="none" stroke="oklch(0 0 0 / 0.08)" strokeWidth="4" />
                 <circle
                   cx="28" cy="28" r="24"
                   fill="none"
                   stroke={
                     building.overallScore >= 80
-                      ? 'oklch(0.72 0.17 155)'
+                      ? 'oklch(0.46 0.17 155)'
                       : building.overallScore >= 60
-                        ? 'oklch(0.72 0.17 55)'
-                        : 'oklch(0.63 0.21 25)'
+                        ? 'oklch(0.55 0.17 50)'
+                        : 'oklch(0.50 0.21 25)'
                   }
                   strokeWidth="4"
                   strokeLinecap="round"
@@ -153,7 +153,7 @@ export function OverviewView({ selectedProperty, onPropertyChange }: Props) {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        {/* Compliance Checklist — spans 2 cols */}
+        {/* Compliance Checklist, spans 2 cols */}
         <div ref={complianceRef} className="lg:col-span-2 bg-card border border-border rounded-2xl overflow-hidden">
           <div className="p-4 sm:p-5 border-b border-border flex items-center justify-between">
             <div>
@@ -164,7 +164,7 @@ export function OverviewView({ selectedProperty, onPropertyChange }: Props) {
           </div>
           <div className="divide-y divide-border">
             {filteredCompliance.map((item) => (
-              <div key={item.id} className="p-4 hover:bg-white/[0.02] transition-colors group">
+              <div key={item.id} className="p-4 hover:bg-black/[0.02] transition-colors group">
                 <div className="flex items-start gap-3">
                   <div className="mt-0.5">
                     {item.status === 'compliant' ? (
@@ -189,7 +189,7 @@ export function OverviewView({ selectedProperty, onPropertyChange }: Props) {
                         Due: {new Date(item.dueDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
                       </span>
                       <span>{item.sbReference}</span>
-                      <span className="bg-white/5 px-1.5 py-0.5 rounded">{item.category}</span>
+                      <span className="bg-black/5 px-1.5 py-0.5 rounded">{item.category}</span>
                     </div>
                   </div>
                   <ChevronRight className="w-4 h-4 text-muted group-hover:text-foreground transition-colors flex-shrink-0 mt-1" />
@@ -212,17 +212,17 @@ export function OverviewView({ selectedProperty, onPropertyChange }: Props) {
             </div>
             {/* Overall bar */}
             <div className="mb-4">
-              <div className="h-2.5 bg-white/5 rounded-full overflow-hidden">
+              <div className="h-2.5 bg-black/5 rounded-full overflow-hidden">
                 <div
                   className="h-full rounded-full animate-fill"
                   style={{
                     width: `${reservePercent}%`,
                     background:
                       reservePercent >= 80
-                        ? 'oklch(0.72 0.17 155)'
+                        ? 'oklch(0.46 0.17 155)'
                         : reservePercent >= 50
-                          ? 'oklch(0.72 0.17 55)'
-                          : 'oklch(0.63 0.21 25)',
+                          ? 'oklch(0.55 0.17 50)'
+                          : 'oklch(0.50 0.21 25)',
                   }}
                 />
               </div>
@@ -244,7 +244,7 @@ export function OverviewView({ selectedProperty, onPropertyChange }: Props) {
                         <span className={`w-1.5 h-1.5 rounded-full ${healthStyles[r.health]}`} />
                       </div>
                     </div>
-                    <div className="h-1 bg-white/5 rounded-full overflow-hidden">
+                    <div className="h-1 bg-black/5 rounded-full overflow-hidden">
                       <div
                         className={`h-full rounded-full ${healthStyles[r.health]}`}
                         style={{ width: `${pct}%` }}
@@ -261,14 +261,14 @@ export function OverviewView({ selectedProperty, onPropertyChange }: Props) {
             <h2 className="font-serif text-lg font-semibold text-foreground mb-3">Inspections</h2>
             <div className="space-y-2.5">
               {filteredInspections.map((insp) => (
-                <div key={insp.id} className="flex items-center gap-3 p-2.5 rounded-xl bg-white/[0.02] border border-border">
+                <div key={insp.id} className="flex items-center gap-3 p-2.5 rounded-xl bg-black/[0.02] border border-border">
                   <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-semibold border flex-shrink-0 ${inspStatusStyles[insp.status]}`}>
                     {inspStatusLabels[insp.status]}
                   </span>
                   <div className="min-w-0 flex-1">
                     <p className="text-xs font-medium text-foreground truncate">{insp.type}</p>
                     <p className="text-[10px] text-muted">
-                      {insp.building} — Due {new Date(insp.dueDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
+                      {insp.building}, Due {new Date(insp.dueDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
                     </p>
                   </div>
                 </div>

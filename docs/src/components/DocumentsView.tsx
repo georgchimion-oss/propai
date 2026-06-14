@@ -15,7 +15,7 @@ const typeColors: Record<DocType, string> = {
   'Notice': 'text-orange bg-orange/10 border-orange/20',
   'Meeting Minutes': 'text-gold bg-gold/10 border-gold/20',
   'Financial Report': 'text-green bg-green/10 border-green/20',
-  'Rules & Regs': 'text-muted-fg bg-white/5 border-border',
+  'Rules & Regs': 'text-muted-fg bg-black/5 border-border',
 }
 
 const statusColors: Record<DocStatus, string> = {
@@ -23,7 +23,7 @@ const statusColors: Record<DocStatus, string> = {
   'Draft': 'text-gold bg-gold/10 border-gold/20',
   'Pending Signature': 'text-blue bg-blue/10 border-blue/20',
   'Expired': 'text-red bg-red/10 border-red/20',
-  'Archived': 'text-muted-fg bg-white/5 border-border',
+  'Archived': 'text-muted-fg bg-black/5 border-border',
 }
 
 const docTypes: DocType[] = ['Lease', 'Amendment', 'Notice', 'Meeting Minutes', 'Financial Report', 'Rules & Regs']
@@ -57,7 +57,7 @@ export function DocumentsView({ selectedProperty, onPropertyChange }: Props) {
           Document Library
         </h1>
         <p className="text-muted-fg text-sm">
-          All association documents — leases, notices, meeting records, and financials.
+          All association documents, leases, notices, meeting records, and financials.
         </p>
       </div>
 
@@ -152,7 +152,7 @@ export function DocumentsView({ selectedProperty, onPropertyChange }: Props) {
                 <h2 className="font-serif text-lg font-semibold text-foreground">Document Details</h2>
                 <button
                   onClick={() => setSelectedDoc(null)}
-                  className="text-muted-fg hover:text-foreground p-1 rounded-lg hover:bg-white/5 transition-colors"
+                  className="text-muted-fg hover:text-foreground p-1 rounded-lg hover:bg-black/5 transition-colors"
                 >
                   <X className="w-4 h-4" />
                 </button>
@@ -210,7 +210,7 @@ export function DocumentsView({ selectedProperty, onPropertyChange }: Props) {
                 <button className="flex-1 bg-blue/15 hover:bg-blue/25 text-blue border border-blue/25 text-xs font-medium py-2 rounded-lg transition-colors">
                   Download
                 </button>
-                <button className="flex-1 bg-white/5 hover:bg-white/10 text-foreground border border-border text-xs font-medium py-2 rounded-lg transition-colors">
+                <button className="flex-1 bg-black/5 hover:bg-black/10 text-foreground border border-border text-xs font-medium py-2 rounded-lg transition-colors">
                   Share
                 </button>
               </div>

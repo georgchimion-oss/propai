@@ -107,7 +107,7 @@ export function SignaturesView({ selectedProperty, onPropertyChange }: Props) {
       ) : (
         <div className="bg-card border border-border rounded-xl overflow-hidden">
           {/* Table header */}
-          <div className="hidden sm:grid grid-cols-12 gap-4 px-5 py-3 border-b border-border bg-white/2">
+          <div className="hidden sm:grid grid-cols-12 gap-4 px-5 py-3 border-b border-border bg-black/3">
             <div className="col-span-4 text-[11px] font-medium text-muted-fg uppercase tracking-wider">Document</div>
             <div className="col-span-3 text-[11px] font-medium text-muted-fg uppercase tracking-wider">Signer</div>
             <div className="col-span-2 text-[11px] font-medium text-muted-fg uppercase tracking-wider">Sent</div>
@@ -121,7 +121,7 @@ export function SignaturesView({ selectedProperty, onPropertyChange }: Props) {
             return (
               <div
                 key={rec.id}
-                className={`grid sm:grid-cols-12 gap-2 sm:gap-4 px-5 py-4 transition-colors hover:bg-white/2 ${
+                className={`grid sm:grid-cols-12 gap-2 sm:gap-4 px-5 py-4 transition-colors hover:bg-black/3 ${
                   idx < records.length - 1 ? 'border-b border-border' : ''
                 }`}
               >
@@ -162,7 +162,7 @@ export function SignaturesView({ selectedProperty, onPropertyChange }: Props) {
                 {/* Days remaining */}
                 <div className="sm:col-span-1 flex items-center justify-end">
                   {rec.status === 'Signed' || rec.status === 'Expired' ? (
-                    <span className="text-xs text-muted-fg">—</span>
+                    <span className="text-xs text-muted-fg">-</span>
                   ) : (
                     <span className={`text-xs font-semibold ${rec.daysRemaining <= 3 ? 'text-red' : rec.daysRemaining <= 7 ? 'text-orange' : 'text-foreground'}`}>
                       {rec.daysRemaining}d

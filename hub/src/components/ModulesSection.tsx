@@ -5,16 +5,16 @@ const modules = [
   {
     name: 'Vestia Triage',
     desc: 'AI maintenance triage & dispatch. Auto-categorize, prioritize, and route work orders in real time.',
-    color: 'text-red-400',
-    borderColor: 'border-red-400/30',
-    bgColor: 'bg-red-400/5',
+    color: 'text-red-600',
+    borderColor: 'border-red-600/30',
+    bgColor: 'bg-red-600/8',
     icon: AlertTriangle,
     tags: ['Auto-routing', 'Priority scoring', 'Vendor matching'],
     url: 'https://triage.georg.miami',
   },
   {
     name: 'Vestia Comply',
-    desc: 'SB 4-D compliance tracking. Milestone inspections, SIRS, reserve funding — fully automated.',
+    desc: 'SB 4-D compliance tracking. Milestone inspections, SIRS, reserve funding, fully automated.',
     color: 'text-teal',
     borderColor: 'border-teal/30',
     bgColor: 'bg-teal/5',
@@ -35,9 +35,9 @@ const modules = [
   {
     name: 'Vestia Screen',
     desc: 'Tenant screening automation. Background checks, credit reports, and approval workflows.',
-    color: 'text-purple-400',
-    borderColor: 'border-purple-400/30',
-    bgColor: 'bg-purple-400/5',
+    color: 'text-purple-600',
+    borderColor: 'border-purple-600/30',
+    bgColor: 'bg-purple-600/8',
     icon: UserCheck,
     tags: ['Background checks', 'Credit scoring', 'Auto-approval'],
     url: 'https://screen.georg.miami',
@@ -45,9 +45,9 @@ const modules = [
   {
     name: 'Vestia Docs',
     desc: 'AI-powered lease document generation. Templates, e-signatures, and secure storage.',
-    color: 'text-blue-400',
-    borderColor: 'border-blue-400/30',
-    bgColor: 'bg-blue-400/5',
+    color: 'text-blue-600',
+    borderColor: 'border-blue-600/30',
+    bgColor: 'bg-blue-600/8',
     icon: FileText,
     tags: ['AI drafting', 'E-signatures', 'Version control'],
     url: 'https://vestiadocs.georg.miami',
@@ -55,9 +55,9 @@ const modules = [
   {
     name: 'Vestia Vendor',
     desc: 'Vendor RFP & bid comparison. Automated solicitation, scoring, and contract management.',
-    color: 'text-orange-400',
-    borderColor: 'border-orange-400/30',
-    bgColor: 'bg-orange-400/5',
+    color: 'text-orange-600',
+    borderColor: 'border-orange-600/30',
+    bgColor: 'bg-orange-600/8',
     icon: Users,
     tags: ['RFP automation', 'Bid scoring', 'Contract mgmt'],
     url: 'https://vendor.georg.miami',
@@ -91,7 +91,7 @@ const ModulesSection = () => {
               <Wrapper
                 key={mod.name}
                 {...wrapperProps}
-                className={`group relative bg-card border border-border rounded-xl p-7 hover:border-border transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl hover:shadow-black/20 reveal-transition block no-underline ${
+                className={`group relative bg-card border border-border rounded-xl p-7 hover:border-border transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl hover:shadow-black/10 reveal-transition block no-underline ${
                   isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
                 } ${isLive ? 'cursor-pointer' : ''}`}
                 style={{ transitionDelay: `${i * 80 + 150}ms`, textDecoration: 'none', color: 'inherit' }}
@@ -105,7 +105,7 @@ const ModulesSection = () => {
                       Live Demo
                     </span>
                   ) : (
-                    <span className="text-[10px] font-sans font-semibold px-2 py-0.5 rounded-full bg-white/5 text-muted-fg border border-border uppercase tracking-wider">
+                    <span className="text-[10px] font-sans font-semibold px-2 py-0.5 rounded-full bg-black/5 text-muted-fg border border-border uppercase tracking-wider">
                       Coming Soon
                     </span>
                   )}

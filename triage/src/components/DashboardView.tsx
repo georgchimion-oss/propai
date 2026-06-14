@@ -119,7 +119,7 @@ export function DashboardView({ selectedProperty, onPropertyChange }: DashboardV
         <div className="p-4 border-b border-border">
           <div className="flex flex-col sm:flex-row gap-3">
             {/* Search */}
-            <div className="flex-1 flex items-center gap-2 bg-white/5 rounded-xl px-3 py-2 border border-border">
+            <div className="flex-1 flex items-center gap-2 bg-black/5 rounded-xl px-3 py-2 border border-border">
               <Search className="w-4 h-4 text-muted" />
               <input
                 type="text"
@@ -136,7 +136,7 @@ export function DashboardView({ selectedProperty, onPropertyChange }: DashboardV
               <select
                 value={priorityFilter}
                 onChange={(e) => setPriorityFilter(e.target.value as FilterPriority)}
-                className="bg-white/5 border border-border rounded-xl px-3 py-2 text-sm text-foreground outline-none cursor-pointer"
+                className="bg-black/5 border border-border rounded-xl px-3 py-2 text-sm text-foreground outline-none cursor-pointer"
               >
                 <option value="all">All Priorities</option>
                 <option value="critical">Critical</option>
@@ -148,7 +148,7 @@ export function DashboardView({ selectedProperty, onPropertyChange }: DashboardV
               <select
                 value={statusFilter}
                 onChange={(e) => setStatusFilter(e.target.value as FilterStatus)}
-                className="bg-white/5 border border-border rounded-xl px-3 py-2 text-sm text-foreground outline-none cursor-pointer"
+                className="bg-black/5 border border-border rounded-xl px-3 py-2 text-sm text-foreground outline-none cursor-pointer"
               >
                 <option value="all">All Status</option>
                 <option value="new">New</option>
@@ -171,11 +171,11 @@ export function DashboardView({ selectedProperty, onPropertyChange }: DashboardV
             filtered.map((wo) => (
               <div
                 key={wo.id}
-                className="p-4 hover:bg-white/[0.02] transition-colors cursor-pointer group"
+                className="p-4 hover:bg-black/[0.02] transition-colors cursor-pointer group"
               >
                 <div className="flex items-start gap-4">
                   {/* Left: Icon */}
-                  <div className="hidden sm:flex w-10 h-10 rounded-xl bg-white/5 items-center justify-center flex-shrink-0 border border-border">
+                  <div className="hidden sm:flex w-10 h-10 rounded-xl bg-black/5 items-center justify-center flex-shrink-0 border border-border">
                     <Wrench className="w-4 h-4 text-muted-fg" />
                   </div>
 
@@ -192,7 +192,7 @@ export function DashboardView({ selectedProperty, onPropertyChange }: DashboardV
                     <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-muted-fg">
                       <span className="flex items-center gap-1">
                         <Building2 className="w-3 h-3" />
-                        {wo.building} — Unit {wo.unit}
+                        {wo.building}, Unit {wo.unit}
                       </span>
                       <span>
                         <Users className="w-3 h-3 inline mr-1" />
@@ -256,7 +256,7 @@ export function DashboardView({ selectedProperty, onPropertyChange }: DashboardV
                 {vendor.specialty.map((s) => (
                   <span
                     key={s}
-                    className="px-2 py-0.5 rounded-md text-[10px] font-medium bg-white/5 text-muted-fg border border-border"
+                    className="px-2 py-0.5 rounded-md text-[10px] font-medium bg-black/5 text-muted-fg border border-border"
                   >
                     {s.replace('_', ' ')}
                   </span>

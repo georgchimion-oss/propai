@@ -11,11 +11,11 @@ interface Props {
 }
 
 const statusColors: Record<RFPStatus, string> = {
-  'Draft': 'text-muted-fg bg-white/5 border-white/10',
+  'Draft': 'text-muted-fg bg-black/5 border-black/10',
   'Open for Bids': 'text-teal bg-teal/10 border-teal/20',
   'Under Review': 'text-orange bg-orange/10 border-orange/20',
   'Awarded': 'text-green bg-green/10 border-green/20',
-  'Closed': 'text-muted-fg bg-white/5 border-white/10',
+  'Closed': 'text-muted-fg bg-black/5 border-black/10',
 }
 
 const categoryColors: Record<RFPCategory, string> = {
@@ -26,7 +26,7 @@ const categoryColors: Record<RFPCategory, string> = {
   'Roofing': 'text-red bg-red/10',
   'Elevator': 'text-gold bg-gold/10',
   'HVAC': 'text-teal bg-teal/10',
-  'Security': 'text-muted-fg bg-white/5',
+  'Security': 'text-muted-fg bg-black/5',
 }
 
 function formatBudget(min: number, max: number): string {
@@ -62,7 +62,7 @@ export function RFPsView({ selectedProperty, onPropertyChange, onSelectRFP }: Pr
       {/* Header */}
       <div className="mb-6">
         <h1 className="font-serif text-3xl font-semibold text-foreground mb-1">Active RFPs</h1>
-        <p className="text-sm text-muted-fg">Request for Proposals — manage solicitations and track bidding activity</p>
+        <p className="text-sm text-muted-fg">Request for Proposals, manage solicitations and track bidding activity</p>
       </div>
 
       {/* Filters */}

@@ -70,7 +70,7 @@ export function TimelineView({ selectedProperty, onPropertyChange }: Props) {
           Compliance Timeline
         </h1>
         <p className="text-sm text-muted-fg mt-1">
-          {building.name} — Key dates, deadlines, and milestones
+          {building.name}, Key dates, deadlines, and milestones
         </p>
       </div>
 
@@ -89,7 +89,7 @@ export function TimelineView({ selectedProperty, onPropertyChange }: Props) {
           </div>
           <div className="flex-1 h-px bg-gold/20" />
           <span className="text-xs font-semibold text-gold px-3 py-1 bg-gold/10 border border-gold/20 rounded-full">
-            Today — {now.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
+            Today, {now.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
           </span>
           <div className="flex-1 h-px bg-gold/20" />
         </div>
@@ -156,7 +156,7 @@ function TimelineCard({ event, index }: { event: TimelineEvent; index: number })
               <span className={`px-1.5 py-0.5 rounded border text-[10px] font-medium ${statusColors[event.status]}`}>
                 {event.status === 'overdue' ? 'OVERDUE' : event.status === 'completed' ? 'Done' : 'Upcoming'}
               </span>
-              <span className="bg-white/5 px-1.5 py-0.5 rounded capitalize">{event.type}</span>
+              <span className="bg-black/5 px-1.5 py-0.5 rounded capitalize">{event.type}</span>
             </div>
           </div>
         </div>

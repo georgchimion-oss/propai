@@ -10,7 +10,7 @@ const CTASection = () => {
     <section ref={ref} className="relative py-24 lg:py-32 overflow-hidden">
       <div className="absolute inset-0">
         <img src={ctaImg} alt="Luxury condo pool at sunset" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-background/80" />
+        <div className="absolute inset-0 bg-background/35" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
@@ -34,7 +34,7 @@ const CTASection = () => {
               onChange={(e) => setEmail(e.target.value)}
               className="flex-1 bg-glass border border-border rounded-md px-5 py-3.5 text-foreground font-sans text-sm placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-gold/50 transition-all"
             />
-            <button className="gradient-gold text-background font-sans font-semibold px-8 py-3.5 rounded-md hover:brightness-110 transition-all duration-300 active:scale-[0.97] text-sm tracking-wide whitespace-nowrap">
+            <button className="gradient-gold text-ink font-sans font-semibold px-8 py-3.5 rounded-md hover:brightness-110 transition-all duration-300 active:scale-[0.97] text-sm tracking-wide whitespace-nowrap">
               Get Early Access
             </button>
           </div>

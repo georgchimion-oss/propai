@@ -24,7 +24,7 @@ function StarRating({ rating }: { rating: number }) {
               ? 'fill-gold text-gold'
               : i === full + 1 && half
               ? 'fill-gold/50 text-gold'
-              : 'text-white/15 fill-white/5'
+              : 'text-black/20 fill-black/5'
           }`}
         />
       ))}
@@ -60,7 +60,7 @@ export function VendorsView() {
       {/* Header */}
       <div className="mb-6">
         <h1 className="font-serif text-3xl font-semibold text-foreground mb-1">Vendor Directory</h1>
-        <p className="text-sm text-muted-fg">Approved contractors across all properties — shared vendor pool</p>
+        <p className="text-sm text-muted-fg">Approved contractors across all properties, shared vendor pool</p>
       </div>
 
       {/* Search & Filter */}
@@ -127,7 +127,7 @@ export function VendorsView() {
                   {vendor.specialty.map(s => (
                     <span
                       key={s}
-                      className="px-2 py-0.5 rounded-lg bg-white/5 text-muted-fg text-xs font-medium"
+                      className="px-2 py-0.5 rounded-lg bg-black/6 text-muted-fg text-xs font-medium"
                     >
                       {s}
                     </span>
@@ -136,11 +136,11 @@ export function VendorsView() {
 
                 {/* Stats */}
                 <div className="grid grid-cols-2 gap-2 text-xs">
-                  <div className="bg-navy-mid/50 rounded-xl p-2.5">
+                  <div className="bg-navy-mid rounded-xl p-2.5">
                     <div className="text-muted-fg mb-0.5">Jobs Completed</div>
                     <div className="font-semibold text-foreground">{vendor.jobsCompleted}</div>
                   </div>
-                  <div className="bg-navy-mid/50 rounded-xl p-2.5">
+                  <div className="bg-navy-mid rounded-xl p-2.5">
                     <div className="text-muted-fg mb-0.5">Years Active</div>
                     <div className="font-semibold text-foreground">{vendor.yearsInBusiness} yrs</div>
                   </div>

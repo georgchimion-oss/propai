@@ -43,7 +43,7 @@ export function OverviewView() {
     <div className="min-h-screen pt-20 pb-8 px-4 max-w-7xl mx-auto">
       <div className="mb-6">
         <h1 className="font-serif text-2xl sm:text-3xl font-semibold text-foreground">Collection Overview</h1>
-        <p className="text-sm text-muted-fg mt-1">Bayshore Tower Residences — March 2024</p>
+        <p className="text-sm text-muted-fg mt-1">Bayshore Tower Residences, March 2024</p>
       </div>
 
       {/* Stats */}
@@ -139,7 +139,7 @@ export function OverviewView() {
                         <span className={`px-2 py-0.5 rounded-full text-[10px] font-semibold border ${statusStyles[payment.status]}`}>{statusLabels[payment.status]}</span>
                       </div>
                       <div className="flex items-center gap-3 text-[10px] text-muted mt-0.5">
-                        <span><Building2 className="w-3 h-3 inline mr-0.5" />{tenant?.building} — {tenant?.unit}</span>
+                        <span><Building2 className="w-3 h-3 inline mr-0.5" />{tenant?.building}, {tenant?.unit}</span>
                         <span>{payment.method}</span>
                         <span>{payment.reference}</span>
                       </div>
@@ -181,7 +181,7 @@ export function OverviewView() {
                       {tenant.paymentPlan && <span className="px-2 py-0.5 rounded-full text-[10px] font-semibold border bg-teal/15 text-teal border-teal/25">Payment Plan</span>}
                     </div>
                     <div className="flex items-center gap-3 text-[10px] text-muted mt-0.5">
-                      <span>{tenant.building} — Unit {tenant.unit}</span>
+                      <span>{tenant.building}, Unit {tenant.unit}</span>
                       <span>Last paid: {tenant.lastPayment ? new Date(tenant.lastPayment).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) : 'Never'}</span>
                       <span className="text-red">{daysSincePayment} days ago</span>
                     </div>

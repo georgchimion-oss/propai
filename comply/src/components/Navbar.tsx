@@ -53,7 +53,7 @@ export function Navbar({ currentView, onViewChange }: NavbarProps) {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-navy-deep/95 backdrop-blur-xl border-b border-border shadow-lg shadow-black/20'
+          ? 'bg-navy-deep/95 backdrop-blur-xl border-b border-border shadow-lg shadow-gray-300/60'
           : 'bg-transparent'
       }`}
     >
@@ -82,7 +82,7 @@ export function Navbar({ currentView, onViewChange }: NavbarProps) {
                   e.stopPropagation()
                   setModuleMenuOpen((prev) => !prev)
                 }}
-                className="flex items-center gap-1 px-2 py-1 rounded-lg text-xs text-muted-fg hover:text-foreground hover:bg-white/5 transition-colors border border-transparent hover:border-border"
+                className="flex items-center gap-1 px-2 py-1 rounded-lg text-xs text-muted-fg hover:text-foreground hover:bg-black/5 transition-colors border border-transparent hover:border-border"
               >
                 Modules
                 <ChevronDown className={`w-3 h-3 transition-transform ${moduleMenuOpen ? 'rotate-180' : ''}`} />
@@ -90,7 +90,7 @@ export function Navbar({ currentView, onViewChange }: NavbarProps) {
 
               {moduleMenuOpen && (
                 <div
-                  className="absolute top-full left-0 mt-2 w-44 bg-card border border-border rounded-xl shadow-xl shadow-black/30 overflow-hidden"
+                  className="absolute top-full left-0 mt-2 w-44 bg-card border border-border rounded-xl shadow-xl shadow-gray-300/60 overflow-hidden"
                   onClick={(e) => e.stopPropagation()}
                 >
                   {modules.map((mod) => (
@@ -98,7 +98,7 @@ export function Navbar({ currentView, onViewChange }: NavbarProps) {
                       {mod.comingSoon ? (
                         <div className="flex items-center justify-between px-3 py-2.5 text-sm text-muted cursor-not-allowed">
                           <span>{mod.label}</span>
-                          <span className="text-[9px] font-semibold bg-white/5 border border-border px-1.5 py-0.5 rounded text-muted uppercase tracking-wider">
+                          <span className="text-[9px] font-semibold bg-black/5 border border-border px-1.5 py-0.5 rounded text-muted uppercase tracking-wider">
                             Soon
                           </span>
                         </div>
@@ -112,7 +112,7 @@ export function Navbar({ currentView, onViewChange }: NavbarProps) {
                       ) : (
                         <a
                           href={mod.href}
-                          className="flex items-center px-3 py-2.5 text-sm text-muted-fg hover:text-foreground hover:bg-white/5 transition-colors"
+                          className="flex items-center px-3 py-2.5 text-sm text-muted-fg hover:text-foreground hover:bg-black/5 transition-colors"
                         >
                           {mod.label}
                         </a>
@@ -125,7 +125,7 @@ export function Navbar({ currentView, onViewChange }: NavbarProps) {
           </div>
 
           {/* Tab Navigation */}
-          <div className="hidden sm:flex items-center gap-1 bg-card/50 rounded-xl p-1 border border-border">
+          <div className="hidden sm:flex items-center gap-1 bg-black/5 rounded-xl p-1 border border-border">
             {tabs.map((tab) => (
               <button
                 key={tab.key}
@@ -133,7 +133,7 @@ export function Navbar({ currentView, onViewChange }: NavbarProps) {
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                   currentView === tab.key
                     ? 'bg-teal/15 text-teal border border-teal/25'
-                    : 'text-muted-fg hover:text-foreground hover:bg-white/5'
+                    : 'text-muted-fg hover:text-foreground hover:bg-black/5'
                 }`}
               >
                 {tab.label}

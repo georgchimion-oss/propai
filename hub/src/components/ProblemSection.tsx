@@ -32,7 +32,7 @@ const ProblemSection = () => {
               {[
                 {
                   stat: 'Email & phone',
-                  desc: 'Average PM still coordinates via email and phone calls — no centralized system.',
+                  desc: 'Average PM still coordinates via email and phone calls, no centralized system.',
                 },
                 {
                   stat: '$19.5B',

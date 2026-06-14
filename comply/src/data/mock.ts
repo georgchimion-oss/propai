@@ -20,14 +20,14 @@ export const buildings: Record<string, Building> = {
   sunridge: { name: 'Sunridge at Aventura', address: '19500 Turnberry Way, Aventura, FL 33180', yearBuilt: 1995, stories: 28, units: 240, nextMilestone: '30-Year Recertification', overallScore: 62 },
 }
 
-// Legacy single export — points to bayshore for backwards compatibility
+// Legacy single export, points to bayshore for backwards compatibility
 export const building: Building = buildings.bayshore
 
 export const inspections: Inspection[] = [
   // Bayshore
   {
     id: 'INS-001',
-    type: 'Milestone Inspection — Phase 1',
+    type: 'Milestone Inspection, Phase 1',
     description: 'Visual examination of habitable and non-habitable areas by licensed engineer per SB 4-D §553.899',
     status: 'passed',
     dueDate: '2024-01-15',
@@ -39,7 +39,7 @@ export const inspections: Inspection[] = [
   },
   {
     id: 'INS-002',
-    type: 'Milestone Inspection — Phase 2',
+    type: 'Milestone Inspection, Phase 2',
     description: 'Detailed inspection including destructive/non-destructive testing of structural components',
     status: 'in_progress',
     dueDate: '2024-06-30',
@@ -59,7 +59,7 @@ export const inspections: Inspection[] = [
   {
     id: 'INS-004',
     type: 'Fire Safety Inspection',
-    description: 'Annual fire safety system inspection — sprinklers, alarms, egress',
+    description: 'Annual fire safety system inspection, sprinklers, alarms, egress',
     status: 'passed',
     dueDate: '2024-03-01',
     completedDate: '2024-02-28',
@@ -80,7 +80,7 @@ export const inspections: Inspection[] = [
   {
     id: 'INS-006',
     type: 'Structural Integrity Reserve Study',
-    description: 'SIRS required under SB 4-D — visual inspection and reserve analysis for structural components',
+    description: 'SIRS required under SB 4-D, visual inspection and reserve analysis for structural components',
     status: 'scheduled',
     dueDate: '2025-01-01',
     building: 'Both Towers',
@@ -90,7 +90,7 @@ export const inspections: Inspection[] = [
   {
     id: 'INS-007',
     type: 'Fire Safety Inspection',
-    description: 'Annual fire safety system inspection — sprinklers, alarms, egress',
+    description: 'Annual fire safety system inspection, sprinklers, alarms, egress',
     status: 'passed',
     dueDate: '2024-02-15',
     completedDate: '2024-02-10',
@@ -133,7 +133,7 @@ export const inspections: Inspection[] = [
   {
     id: 'INS-011',
     type: 'Fire Safety Inspection',
-    description: 'Annual fire safety system inspection — sprinklers, alarms, egress',
+    description: 'Annual fire safety system inspection, sprinklers, alarms, egress',
     status: 'failed',
     dueDate: '2024-03-01',
     completedDate: '2024-02-22',
@@ -145,7 +145,7 @@ export const inspections: Inspection[] = [
   {
     id: 'INS-012',
     type: 'Structural Integrity Reserve Study',
-    description: 'SIRS required under SB 4-D — visual inspection and reserve analysis',
+    description: 'SIRS required under SB 4-D, visual inspection and reserve analysis',
     status: 'in_progress',
     dueDate: '2024-12-31',
     inspector: 'Structural Solutions FL',
@@ -162,7 +162,7 @@ export const complianceItems: ComplianceItem[] = [
     category: 'SB 4-D Structural',
     status: 'action_needed',
     dueDate: '2024-06-30',
-    details: 'Phase 1 complete. Phase 2 in progress — destructive testing of balcony connections and parking structure.',
+    details: 'Phase 1 complete. Phase 2 in progress, destructive testing of balcony connections and parking structure.',
     sbReference: '§553.899(4)',
     propertyId: 'bayshore',
   },
@@ -178,7 +178,7 @@ export const complianceItems: ComplianceItem[] = [
   },
   {
     id: 'C-003',
-    requirement: 'Reserve Funding — No Waiver After Dec 2024',
+    requirement: 'Reserve Funding, No Waiver After Dec 2024',
     category: 'SB 4-D Reserves',
     status: 'compliant',
     dueDate: '2024-12-31',
@@ -202,7 +202,7 @@ export const complianceItems: ComplianceItem[] = [
     category: 'Miami-Dade County',
     status: 'action_needed',
     dueDate: '2024-09-15',
-    details: 'Building turns 26 — recertification due. Inspection scheduled with licensed electrician.',
+    details: 'Building turns 26, recertification due. Inspection scheduled with licensed electrician.',
     sbReference: 'MDC §8-11(f)',
     propertyId: 'bayshore',
   },
@@ -236,7 +236,7 @@ export const complianceItems: ComplianceItem[] = [
     sbReference: '§718.111(12)(g)',
     propertyId: 'bayshore',
   },
-  // Coconut Grove — newer, mostly compliant
+  // Coconut Grove, newer, mostly compliant
   {
     id: 'C-009',
     requirement: 'Annual Fire Safety Inspection',
@@ -259,7 +259,7 @@ export const complianceItems: ComplianceItem[] = [
   },
   {
     id: 'C-011',
-    requirement: 'Reserve Funding — No Waiver After Dec 2024',
+    requirement: 'Reserve Funding, No Waiver After Dec 2024',
     category: 'SB 4-D Reserves',
     status: 'compliant',
     dueDate: '2024-12-31',
@@ -277,14 +277,14 @@ export const complianceItems: ComplianceItem[] = [
     sbReference: '§553.899(4)',
     propertyId: 'coconut',
   },
-  // Sunridge — older, more issues
+  // Sunridge, older, more issues
   {
     id: 'C-013',
     requirement: '30-Year Structural Recertification',
     category: 'Miami-Dade County',
     status: 'non_compliant',
     dueDate: '2024-01-01',
-    details: 'Building exceeded 30-year threshold. Recertification is overdue — enforcement notice received from county.',
+    details: 'Building exceeded 30-year threshold. Recertification is overdue, enforcement notice received from county.',
     sbReference: 'MDC §8-11',
     propertyId: 'sunridge',
   },
@@ -294,7 +294,7 @@ export const complianceItems: ComplianceItem[] = [
     category: 'Miami-Dade County',
     status: 'non_compliant',
     dueDate: '2024-03-01',
-    details: 'Inspection failed — sprinkler heads on floors 14–18 require immediate replacement. Re-inspection required within 30 days.',
+    details: 'Inspection failed, sprinkler heads on floors 14–18 require immediate replacement. Re-inspection required within 30 days.',
     sbReference: 'MDC §8A-10',
     propertyId: 'sunridge',
   },
@@ -310,7 +310,7 @@ export const complianceItems: ComplianceItem[] = [
   },
   {
     id: 'C-016',
-    requirement: 'Reserve Funding — No Waiver After Dec 2024',
+    requirement: 'Reserve Funding, No Waiver After Dec 2024',
     category: 'SB 4-D Reserves',
     status: 'action_needed',
     dueDate: '2024-12-31',
@@ -331,14 +331,14 @@ export const reserveStudy: ReserveStudy[] = [
   { component: 'Elevator Systems', currentFunding: 85000, requiredFunding: 220000, health: 'critical', usefulLife: 25, remainingLife: 5, propertyId: 'bayshore' },
   { component: 'Windows / Glazing', currentFunding: 340000, requiredFunding: 450000, health: 'underfunded', usefulLife: 30, remainingLife: 10, propertyId: 'bayshore' },
   { component: 'Painting / Coatings', currentFunding: 95000, requiredFunding: 95000, health: 'funded', usefulLife: 10, remainingLife: 6, propertyId: 'bayshore' },
-  // Coconut Grove — newer, well-funded
+  // Coconut Grove, newer, well-funded
   { component: 'Roof System', currentFunding: 310000, requiredFunding: 340000, health: 'funded', usefulLife: 25, remainingLife: 15, propertyId: 'coconut' },
   { component: 'Structural / Load-Bearing', currentFunding: 520000, requiredFunding: 520000, health: 'funded', usefulLife: 50, remainingLife: 30, propertyId: 'coconut' },
   { component: 'Waterproofing / Sealants', currentFunding: 180000, requiredFunding: 200000, health: 'funded', usefulLife: 15, remainingLife: 10, propertyId: 'coconut' },
   { component: 'Plumbing Systems', currentFunding: 140000, requiredFunding: 160000, health: 'funded', usefulLife: 40, remainingLife: 20, propertyId: 'coconut' },
   { component: 'Elevator Systems', currentFunding: 95000, requiredFunding: 110000, health: 'underfunded', usefulLife: 25, remainingLife: 15, propertyId: 'coconut' },
   { component: 'Fire Protection', currentFunding: 85000, requiredFunding: 90000, health: 'funded', usefulLife: 20, remainingLife: 16, propertyId: 'coconut' },
-  // Sunridge — older, heavily underfunded
+  // Sunridge, older, heavily underfunded
   { component: 'Roof System', currentFunding: 180000, requiredFunding: 720000, health: 'critical', usefulLife: 25, remainingLife: 2, propertyId: 'sunridge' },
   { component: 'Structural / Load-Bearing', currentFunding: 620000, requiredFunding: 1100000, health: 'underfunded', usefulLife: 50, remainingLife: 15, propertyId: 'sunridge' },
   { component: 'Waterproofing / Sealants', currentFunding: 55000, requiredFunding: 480000, health: 'critical', usefulLife: 15, remainingLife: 1, propertyId: 'sunridge' },
@@ -352,37 +352,37 @@ export const documents: ComplianceDocument[] = [
   // Bayshore
   { id: 'D-001', name: 'Phase 1 Milestone Inspection Report', category: 'Inspections', status: 'current', uploadDate: '2023-12-22', fileSize: '4.2 MB', propertyId: 'bayshore' },
   { id: 'D-002', name: 'Annual Fire Safety Report 2024', category: 'Inspections', status: 'current', uploadDate: '2024-03-01', fileSize: '1.8 MB', propertyId: 'bayshore' },
-  { id: 'D-003', name: 'Reserve Study — 2023 Update', category: 'Financial', status: 'expiring_soon', uploadDate: '2023-06-15', expiryDate: '2024-06-15', fileSize: '12.3 MB', propertyId: 'bayshore' },
-  { id: 'D-004', name: 'Board Meeting Minutes — Q1 2024', category: 'Governance', status: 'current', uploadDate: '2024-03-15', fileSize: '0.5 MB', propertyId: 'bayshore' },
-  { id: 'D-005', name: 'Insurance Certificate — Property', category: 'Insurance', status: 'current', uploadDate: '2024-01-01', expiryDate: '2025-01-01', fileSize: '2.1 MB', propertyId: 'bayshore' },
-  { id: 'D-006', name: 'Insurance Certificate — Liability', category: 'Insurance', status: 'expiring_soon', uploadDate: '2023-07-01', expiryDate: '2024-07-01', fileSize: '1.9 MB', propertyId: 'bayshore' },
-  { id: 'D-007', name: 'Elevator Inspection — Tower A', category: 'Inspections', status: 'current', uploadDate: '2024-01-20', fileSize: '0.8 MB', propertyId: 'bayshore' },
-  { id: 'D-008', name: 'Elevator Inspection — Tower B', category: 'Inspections', status: 'expired', uploadDate: '2023-02-15', expiryDate: '2024-02-15', fileSize: '0.7 MB', propertyId: 'bayshore' },
-  { id: 'D-009', name: '40-Year Recertification — Structural', category: 'Inspections', status: 'missing', uploadDate: '', fileSize: '', propertyId: 'bayshore' },
+  { id: 'D-003', name: 'Reserve Study, 2023 Update', category: 'Financial', status: 'expiring_soon', uploadDate: '2023-06-15', expiryDate: '2024-06-15', fileSize: '12.3 MB', propertyId: 'bayshore' },
+  { id: 'D-004', name: 'Board Meeting Minutes, Q1 2024', category: 'Governance', status: 'current', uploadDate: '2024-03-15', fileSize: '0.5 MB', propertyId: 'bayshore' },
+  { id: 'D-005', name: 'Insurance Certificate, Property', category: 'Insurance', status: 'current', uploadDate: '2024-01-01', expiryDate: '2025-01-01', fileSize: '2.1 MB', propertyId: 'bayshore' },
+  { id: 'D-006', name: 'Insurance Certificate, Liability', category: 'Insurance', status: 'expiring_soon', uploadDate: '2023-07-01', expiryDate: '2024-07-01', fileSize: '1.9 MB', propertyId: 'bayshore' },
+  { id: 'D-007', name: 'Elevator Inspection, Tower A', category: 'Inspections', status: 'current', uploadDate: '2024-01-20', fileSize: '0.8 MB', propertyId: 'bayshore' },
+  { id: 'D-008', name: 'Elevator Inspection, Tower B', category: 'Inspections', status: 'expired', uploadDate: '2023-02-15', expiryDate: '2024-02-15', fileSize: '0.7 MB', propertyId: 'bayshore' },
+  { id: 'D-009', name: '40-Year Recertification, Structural', category: 'Inspections', status: 'missing', uploadDate: '', fileSize: '', propertyId: 'bayshore' },
   { id: 'D-010', name: 'SIRS Report', category: 'Financial', status: 'missing', uploadDate: '', fileSize: '', propertyId: 'bayshore' },
   // Coconut Grove
   { id: 'D-011', name: 'Annual Fire Safety Report 2024', category: 'Inspections', status: 'current', uploadDate: '2024-02-10', fileSize: '1.4 MB', propertyId: 'coconut' },
   { id: 'D-012', name: 'Elevator Inspection Certificate 2024', category: 'Inspections', status: 'current', uploadDate: '2024-01-18', fileSize: '0.6 MB', propertyId: 'coconut' },
-  { id: 'D-013', name: 'Reserve Study — 2023', category: 'Financial', status: 'current', uploadDate: '2023-09-01', expiryDate: '2025-09-01', fileSize: '9.8 MB', propertyId: 'coconut' },
-  { id: 'D-014', name: 'Insurance Certificate — Property', category: 'Insurance', status: 'current', uploadDate: '2024-01-01', expiryDate: '2025-01-01', fileSize: '2.0 MB', propertyId: 'coconut' },
+  { id: 'D-013', name: 'Reserve Study, 2023', category: 'Financial', status: 'current', uploadDate: '2023-09-01', expiryDate: '2025-09-01', fileSize: '9.8 MB', propertyId: 'coconut' },
+  { id: 'D-014', name: 'Insurance Certificate, Property', category: 'Insurance', status: 'current', uploadDate: '2024-01-01', expiryDate: '2025-01-01', fileSize: '2.0 MB', propertyId: 'coconut' },
   { id: 'D-015', name: '20-Year Milestone Inspection Pre-Assessment', category: 'Inspections', status: 'missing', uploadDate: '', fileSize: '', propertyId: 'coconut' },
   // Sunridge
   { id: 'D-016', name: '30-Year Recertification Report', category: 'Inspections', status: 'missing', uploadDate: '', fileSize: '', propertyId: 'sunridge' },
-  { id: 'D-017', name: 'Fire Safety Inspection — Failed Report', category: 'Inspections', status: 'current', uploadDate: '2024-02-22', fileSize: '2.6 MB', propertyId: 'sunridge' },
-  { id: 'D-018', name: 'Insurance Certificate — Property', category: 'Insurance', status: 'expiring_soon', uploadDate: '2023-04-01', expiryDate: '2024-04-01', fileSize: '2.1 MB', propertyId: 'sunridge' },
+  { id: 'D-017', name: 'Fire Safety Inspection, Failed Report', category: 'Inspections', status: 'current', uploadDate: '2024-02-22', fileSize: '2.6 MB', propertyId: 'sunridge' },
+  { id: 'D-018', name: 'Insurance Certificate, Property', category: 'Insurance', status: 'expiring_soon', uploadDate: '2023-04-01', expiryDate: '2024-04-01', fileSize: '2.1 MB', propertyId: 'sunridge' },
   { id: 'D-019', name: 'SIRS Preliminary Report', category: 'Financial', status: 'current', uploadDate: '2024-01-30', fileSize: '5.4 MB', propertyId: 'sunridge' },
-  { id: 'D-020', name: 'Board Meeting Minutes — Q4 2023', category: 'Governance', status: 'current', uploadDate: '2024-01-10', fileSize: '0.4 MB', propertyId: 'sunridge' },
+  { id: 'D-020', name: 'Board Meeting Minutes, Q4 2023', category: 'Governance', status: 'current', uploadDate: '2024-01-10', fileSize: '0.4 MB', propertyId: 'sunridge' },
 ]
 
 export const timeline: TimelineEvent[] = [
   // Bayshore
   { id: 'T-001', date: '2023-12-20', title: 'Phase 1 Milestone Inspection Completed', description: 'Visual examination passed. Minor spalling noted on P2.', type: 'inspection', status: 'completed', propertyId: 'bayshore' },
-  { id: 'T-002', date: '2024-02-15', title: 'Elevator Inspection — Tower B', description: 'OVERDUE — Must be completed immediately', type: 'deadline', status: 'overdue', propertyId: 'bayshore' },
+  { id: 'T-002', date: '2024-02-15', title: 'Elevator Inspection, Tower B', description: 'OVERDUE, Must be completed immediately', type: 'deadline', status: 'overdue', propertyId: 'bayshore' },
   { id: 'T-003', date: '2024-02-28', title: 'Fire Safety Inspection Completed', description: 'All systems passed annual certification', type: 'inspection', status: 'completed', propertyId: 'bayshore' },
   { id: 'T-004', date: '2024-04-15', title: 'Q2 Board Meeting', description: 'SB 4-D compliance review on agenda. Reserve funding vote.', type: 'meeting', status: 'upcoming', propertyId: 'bayshore' },
-  { id: 'T-005', date: '2024-06-30', title: 'Phase 2 Milestone Inspection Due', description: 'Destructive testing of structural components — deadline firm', type: 'milestone', status: 'upcoming', propertyId: 'bayshore' },
+  { id: 'T-005', date: '2024-06-30', title: 'Phase 2 Milestone Inspection Due', description: 'Destructive testing of structural components, deadline firm', type: 'milestone', status: 'upcoming', propertyId: 'bayshore' },
   { id: 'T-006', date: '2024-07-01', title: 'Board Education Certificates Due', description: '2 members still need to complete required coursework', type: 'deadline', status: 'upcoming', propertyId: 'bayshore' },
-  { id: 'T-007', date: '2024-09-15', title: '40-Year Electrical Recertification', description: 'Miami-Dade County requirement — inspector to be scheduled', type: 'inspection', status: 'upcoming', propertyId: 'bayshore' },
+  { id: 'T-007', date: '2024-09-15', title: '40-Year Electrical Recertification', description: 'Miami-Dade County requirement, inspector to be scheduled', type: 'inspection', status: 'upcoming', propertyId: 'bayshore' },
   { id: 'T-008', date: '2024-12-31', title: 'Reserve Waiver Prohibition Effective', description: 'SB 4-D: Associations can no longer waive or reduce reserve funding', type: 'milestone', status: 'upcoming', propertyId: 'bayshore' },
   { id: 'T-009', date: '2025-01-01', title: 'SIRS Report Due', description: 'Structural Integrity Reserve Study must be completed and filed', type: 'filing', status: 'upcoming', propertyId: 'bayshore' },
   // Coconut Grove

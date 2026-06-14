@@ -5,20 +5,26 @@
   --font-serif: 'Cormorant Garamond', serif;
   --font-sans: 'DM Sans', sans-serif;
 
-  --color-background: oklch(0.13 0.01 280);
-  --color-foreground: oklch(0.97 0.01 90);
-  --color-card: oklch(0.16 0.01 280);
-  --color-navy-deep: oklch(0.13 0.01 280);
-  --color-navy-mid: oklch(0.15 0.01 280);
-  --color-gold: oklch(0.74 0.09 75);
-  --color-gold-bright: oklch(0.79 0.09 78);
-  --color-teal: oklch(0.81 0.13 175);
-  --color-red: oklch(0.63 0.21 25);
-  --color-orange: oklch(0.72 0.17 55);
-  --color-green: oklch(0.72 0.17 155);
-  --color-muted: oklch(0.55 0.01 260);
-  --color-muted-fg: oklch(0.62 0.01 260);
-  --color-border: oklch(1 0 0 / 0.08);
+  /* Light surfaces */
+  --color-background: oklch(0.975 0.005 90);
+  --color-foreground: oklch(0.15 0.01 280);
+  --color-card: oklch(1 0 0);
+  --color-navy-deep: oklch(0.96 0.005 280);
+  --color-navy-mid: oklch(0.94 0.005 280);
+
+  /* Semantic, darkened to hit WCAG 4.5:1 on white */
+  --color-gold: oklch(0.52 0.10 72);
+  --color-gold-bright: oklch(0.56 0.10 75);
+  --color-teal: oklch(0.42 0.13 185);
+  --color-red: oklch(0.50 0.21 25);
+  --color-orange: oklch(0.52 0.17 48);
+  --color-green: oklch(0.44 0.15 155);
+  --color-blue: oklch(0.46 0.17 252);
+
+  /* Neutrals */
+  --color-muted: oklch(0.72 0.01 260);
+  --color-muted-fg: oklch(0.50 0.01 260);
+  --color-border: oklch(0 0 0 / 0.10);
 }
 
 * {
@@ -39,13 +45,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bg-glass {
-  background-color: oklch(1 0 0 / 0.03);
+  background-color: oklch(1 0 0 / 0.75);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
 }
 
 .gradient-gold {
-  background: linear-gradient(135deg, #c9a96e, #d4b87a);
+  background: linear-gradient(135deg, #a07840, #b08848);
 }
 
 @keyframes pulse-dot {
@@ -86,15 +92,15 @@ h1, h2, h3, h4, h5, h6 {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: oklch(1 0 0 / 0.1);
+  background: oklch(0 0 0 / 0.12);
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: oklch(1 0 0 / 0.15);
+  background: oklch(0 0 0 / 0.20);
 }
 
 /* Select dropdown styling */
 select option {
-  background-color: oklch(0.16 0.01 280);
-  color: oklch(0.97 0.01 90);
+  background-color: oklch(1 0 0);
+  color: oklch(0.15 0.01 280);
 }

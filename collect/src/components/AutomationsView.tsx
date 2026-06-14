@@ -102,10 +102,10 @@ export function AutomationsView({ selectedProperty, onPropertyChange }: Props) {
               {/* Header */}
               <button
                 onClick={() => setExpanded(isExpanded ? null : seq.id)}
-                className="w-full p-4 sm:p-5 flex items-center gap-4 text-left hover:bg-white/[0.02] transition-colors"
+                className="w-full p-4 sm:p-5 flex items-center gap-4 text-left hover:bg-black/[0.025] transition-colors"
               >
                 <div className={`w-10 h-10 rounded-xl flex items-center justify-center border flex-shrink-0 ${
-                  seq.active ? 'bg-green/15 border-green/25' : 'bg-white/5 border-border'
+                  seq.active ? 'bg-green/15 border-green/25' : 'bg-black/5 border-border'
                 }`}>
                   <Zap className={`w-5 h-5 ${seq.active ? 'text-green' : 'text-muted'}`} />
                 </div>
@@ -117,7 +117,7 @@ export function AutomationsView({ selectedProperty, onPropertyChange }: Props) {
                         <Power className="w-2.5 h-2.5" /> Active
                       </span>
                     ) : (
-                      <span className="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-white/5 text-muted-fg border border-border">Inactive</span>
+                      <span className="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-black/5 text-muted-fg border border-border">Inactive</span>
                     )}
                   </div>
                   <div className="flex items-center gap-3 mt-0.5 text-[10px] text-muted">
@@ -148,7 +148,7 @@ export function AutomationsView({ selectedProperty, onPropertyChange }: Props) {
                             )}
                           </div>
 
-                          <div className={`p-3 rounded-xl border ${step.sent ? 'bg-white/[0.02] border-border' : 'bg-white/[0.01] border-border'}`}>
+                          <div className={`p-3 rounded-xl border ${step.sent ? 'bg-black/[0.025] border-border' : 'bg-black/[0.01] border-border'}`}>
                             <div className="flex items-center gap-2 mb-1.5 flex-wrap">
                               <span className="text-xs font-semibold text-foreground">
                                 Day {step.day > 0 ? `+${step.day}` : step.day}
@@ -157,7 +157,7 @@ export function AutomationsView({ selectedProperty, onPropertyChange }: Props) {
                                 {stepIcons[step.action]}
                                 {stepLabels[step.action]}
                               </span>
-                              <span className="text-[10px] text-muted bg-white/5 px-1.5 py-0.5 rounded">{step.channel}</span>
+                              <span className="text-[10px] text-muted bg-black/5 px-1.5 py-0.5 rounded">{step.channel}</span>
                               {step.sent && <span className="text-[10px] text-green font-medium">Sent</span>}
                             </div>
                             <p className="text-xs text-muted-fg leading-relaxed">{step.message}</p>

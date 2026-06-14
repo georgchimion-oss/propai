@@ -80,7 +80,7 @@ export function DocumentsView({ selectedProperty, onPropertyChange }: Props) {
             Document Vault
           </h1>
           <p className="text-sm text-muted-fg mt-1">
-            {building.name} — Compliance documents and certificates
+            {building.name}, Compliance documents and certificates
           </p>
         </div>
         <button className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-teal/15 border border-teal/25 text-teal text-sm font-medium hover:bg-teal/25 transition-colors">
@@ -102,7 +102,7 @@ export function DocumentsView({ selectedProperty, onPropertyChange }: Props) {
         {/* Filters */}
         <div className="p-4 border-b border-border">
           <div className="flex flex-col sm:flex-row gap-3">
-            <div className="flex-1 flex items-center gap-2 bg-white/5 rounded-xl px-3 py-2 border border-border">
+            <div className="flex-1 flex items-center gap-2 bg-black/5 rounded-xl px-3 py-2 border border-border">
               <Search className="w-4 h-4 text-muted" />
               <input
                 type="text"
@@ -117,7 +117,7 @@ export function DocumentsView({ selectedProperty, onPropertyChange }: Props) {
               <select
                 value={statusFilter}
                 onChange={(e) => setStatusFilter(e.target.value as FilterStatus)}
-                className="bg-white/5 border border-border rounded-xl px-3 py-2 text-sm text-foreground outline-none cursor-pointer"
+                className="bg-black/5 border border-border rounded-xl px-3 py-2 text-sm text-foreground outline-none cursor-pointer"
               >
                 <option value="all">All Status</option>
                 <option value="current">Current</option>
@@ -128,7 +128,7 @@ export function DocumentsView({ selectedProperty, onPropertyChange }: Props) {
               <select
                 value={categoryFilter}
                 onChange={(e) => setCategoryFilter(e.target.value)}
-                className="bg-white/5 border border-border rounded-xl px-3 py-2 text-sm text-foreground outline-none cursor-pointer"
+                className="bg-black/5 border border-border rounded-xl px-3 py-2 text-sm text-foreground outline-none cursor-pointer"
               >
                 {categories.map((c) => (
                   <option key={c} value={c}>
@@ -150,13 +150,13 @@ export function DocumentsView({ selectedProperty, onPropertyChange }: Props) {
             filtered.map((doc) => {
               const config = statusConfig[doc.status]
               return (
-                <div key={doc.id} className="p-4 hover:bg-white/[0.02] transition-colors group">
+                <div key={doc.id} className="p-4 hover:bg-black/[0.02] transition-colors group">
                   <div className="flex items-center gap-4">
                     {/* Icon */}
                     <div className={`w-10 h-10 rounded-xl flex items-center justify-center border flex-shrink-0 ${
                       doc.status === 'missing'
                         ? 'bg-red/5 border-red/15'
-                        : 'bg-white/5 border-border'
+                        : 'bg-black/5 border-border'
                     }`}>
                       {doc.status === 'missing' ? (
                         <XCircle className="w-4 h-4 text-red" />
@@ -197,7 +197,7 @@ export function DocumentsView({ selectedProperty, onPropertyChange }: Props) {
 
                     {/* Actions */}
                     {doc.status !== 'missing' ? (
-                      <button className="p-2 rounded-lg text-muted hover:text-foreground hover:bg-white/5 transition-colors opacity-0 group-hover:opacity-100">
+                      <button className="p-2 rounded-lg text-muted hover:text-foreground hover:bg-black/5 transition-colors opacity-0 group-hover:opacity-100">
                         <Download className="w-4 h-4" />
                       </button>
                     ) : (

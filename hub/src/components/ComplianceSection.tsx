@@ -31,7 +31,7 @@ const ComplianceSection = () => {
                 Post-Surfside compliance, fully automated.
               </h2>
               <p className="text-muted-fg font-sans text-sm leading-relaxed mb-8 max-w-lg">
-                The Florida Building Safety Act introduced sweeping new requirements for condo associations. Vestia Comply tracks every milestone, deadline, and document — so board members aren't personally liable for missed inspections.
+                The Florida Building Safety Act introduced sweeping new requirements for condo associations. Vestia Comply tracks every milestone, deadline, and document, so board members aren't personally liable for missed inspections.
               </p>
 
               <div className="grid grid-cols-2 gap-4 mb-8">

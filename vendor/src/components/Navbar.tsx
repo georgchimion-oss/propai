@@ -49,7 +49,7 @@ export function Navbar({ currentView, onViewChange }: NavbarProps) {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-navy-deep/95 backdrop-blur-xl border-b border-border shadow-lg shadow-black/20'
+          ? 'bg-white/95 backdrop-blur-xl border-b border-border shadow-lg shadow-black/8'
           : 'bg-transparent'
       }`}
     >
@@ -76,7 +76,7 @@ export function Navbar({ currentView, onViewChange }: NavbarProps) {
           {/* Right side: tabs + module switcher */}
           <div className="hidden sm:flex items-center gap-3">
             {/* Desktop Tabs */}
-            <div className="flex items-center gap-1 bg-card/50 rounded-xl p-1 border border-border">
+            <div className="flex items-center gap-1 bg-black/4 rounded-xl p-1 border border-border">
               {tabs.map((tab) => (
                 <button
                   key={tab.key}
@@ -84,7 +84,7 @@ export function Navbar({ currentView, onViewChange }: NavbarProps) {
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                     currentView === tab.key
                       ? 'bg-orange/15 text-orange border border-orange/25'
-                      : 'text-muted-fg hover:text-foreground hover:bg-white/5'
+                      : 'text-muted-fg hover:text-foreground hover:bg-black/5'
                   }`}
                 >
                   {tab.label}
@@ -96,7 +96,7 @@ export function Navbar({ currentView, onViewChange }: NavbarProps) {
             <div className="relative" ref={modulesRef}>
               <button
                 onClick={() => setModulesOpen(!modulesOpen)}
-                className="flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-medium text-muted-fg hover:text-foreground bg-card/50 border border-border hover:border-orange/20 transition-all"
+                className="flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-medium text-muted-fg hover:text-foreground bg-black/4 border border-border hover:border-orange/20 transition-all"
               >
                 Modules
                 <ChevronDown
@@ -105,7 +105,7 @@ export function Navbar({ currentView, onViewChange }: NavbarProps) {
               </button>
 
               {modulesOpen && (
-                <div className="absolute right-0 top-full mt-2 w-44 bg-card border border-border rounded-xl shadow-xl shadow-black/30 overflow-hidden z-50">
+                <div className="absolute right-0 top-full mt-2 w-44 bg-card border border-border rounded-xl shadow-xl shadow-black/12 overflow-hidden z-50">
                   {moduleLinks.map((mod) => (
                     <div key={mod.name}>
                       {mod.current ? (
@@ -121,7 +121,7 @@ export function Navbar({ currentView, onViewChange }: NavbarProps) {
                           target="_blank"
                           rel="noopener noreferrer"
                           onClick={() => setModulesOpen(false)}
-                          className="flex items-center justify-between px-3 py-2.5 hover:bg-white/5 transition-colors group"
+                          className="flex items-center justify-between px-3 py-2.5 hover:bg-black/5 transition-colors group"
                         >
                           <span className="text-sm text-muted-fg group-hover:text-foreground transition-colors">
                             {mod.name}
@@ -158,7 +158,7 @@ export function Navbar({ currentView, onViewChange }: NavbarProps) {
                 className={`px-4 py-2.5 rounded-lg text-sm font-medium text-left transition-all ${
                   currentView === tab.key
                     ? 'bg-orange/15 text-orange'
-                    : 'text-muted-fg hover:text-foreground hover:bg-white/5'
+                    : 'text-muted-fg hover:text-foreground hover:bg-black/5'
                 }`}
               >
                 {tab.label}

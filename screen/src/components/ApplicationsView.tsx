@@ -76,7 +76,7 @@ export function ApplicationsView({ selectedProperty, onPropertyChange, onSelectA
             className={`px-3 py-1.5 rounded-lg text-xs font-medium border transition-all ${
               statusFilter === 'all'
                 ? 'bg-purple/15 text-purple border-purple/25'
-                : 'bg-card/50 text-muted-fg border-border hover:text-foreground hover:bg-white/5'
+                : 'bg-card/50 text-muted-fg border-border hover:text-foreground hover:bg-black/5'
             }`}
           >
             All ({totalForProperty})
@@ -91,7 +91,7 @@ export function ApplicationsView({ selectedProperty, onPropertyChange, onSelectA
                 className={`px-3 py-1.5 rounded-lg text-xs font-medium border transition-all ${
                   statusFilter === s
                     ? `${cfg.bg} ${cfg.text} ${cfg.border}`
-                    : 'bg-card/50 text-muted-fg border-border hover:text-foreground hover:bg-white/5'
+                    : 'bg-card/50 text-muted-fg border-border hover:text-foreground hover:bg-black/5'
                 }`}
               >
                 {cfg.label} ({count})
@@ -112,7 +112,7 @@ export function ApplicationsView({ selectedProperty, onPropertyChange, onSelectA
               className="w-full bg-card/50 border border-border rounded-xl pl-9 pr-4 py-2.5 text-sm text-foreground placeholder-muted-fg focus:outline-none focus:border-purple/40 transition-colors"
             />
           </div>
-          <button className="flex items-center gap-2 px-4 py-2.5 bg-card/50 border border-border rounded-xl text-sm text-muted-fg hover:text-foreground hover:bg-white/5 transition-all">
+          <button className="flex items-center gap-2 px-4 py-2.5 bg-card/50 border border-border rounded-xl text-sm text-muted-fg hover:text-foreground hover:bg-black/5 transition-all">
             <SlidersHorizontal className="w-4 h-4" />
             <span className="hidden sm:inline">Filter</span>
           </button>
@@ -132,7 +132,7 @@ export function ApplicationsView({ selectedProperty, onPropertyChange, onSelectA
               <button
                 key={app.id}
                 onClick={() => onSelectApplication(app.id)}
-                className="w-full bg-card/50 border border-border rounded-2xl px-5 py-4 flex items-center gap-4 hover:border-purple/20 hover:bg-white/3 transition-all text-left group"
+                className="w-full bg-card/50 border border-border rounded-2xl px-5 py-4 flex items-center gap-4 hover:border-purple/20 hover:bg-black/[0.03] transition-all text-left group"
               >
                 {/* Avatar */}
                 <div className="w-10 h-10 rounded-xl bg-purple/15 border border-purple/20 flex items-center justify-center flex-shrink-0">

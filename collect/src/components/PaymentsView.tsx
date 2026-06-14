@@ -112,11 +112,11 @@ export function PaymentsView({ selectedProperty, onPropertyChange }: Props) {
       <div className="bg-card border border-border rounded-2xl p-4 sm:p-5 mb-6">
         <div className="flex items-center justify-between mb-3">
           <h2 className="font-serif text-lg font-semibold text-foreground">
-            {property?.name} — March Collection Progress
+            {property?.name}, March Collection Progress
           </h2>
           <span className="text-sm font-semibold text-green">{collectionRate}%</span>
         </div>
-        <div className="h-3 bg-white/5 rounded-full overflow-hidden flex">
+        <div className="h-3 bg-black/5 rounded-full overflow-hidden flex">
           <div
             className="h-full bg-green rounded-l-full"
             style={{ width: `${filteredTenants.filter(t => t.status === 'paid').length / Math.max(filteredTenants.length, 1) * 100}%` }}
@@ -153,9 +153,9 @@ export function PaymentsView({ selectedProperty, onPropertyChange }: Props) {
               <div className="p-8 text-center text-sm text-muted-fg">No tenants for this property.</div>
             ) : (
               filteredTenants.map((t) => (
-                <div key={t.id} className="p-3 sm:p-4 hover:bg-white/[0.02] transition-colors">
+                <div key={t.id} className="p-3 sm:p-4 hover:bg-black/[0.025] transition-colors">
                   <div className="flex items-center gap-3">
-                    <div className="w-9 h-9 rounded-lg bg-white/5 border border-border flex items-center justify-center flex-shrink-0">
+                    <div className="w-9 h-9 rounded-lg bg-black/5 border border-border flex items-center justify-center flex-shrink-0">
                       <Building2 className="w-4 h-4 text-muted-fg" />
                     </div>
                     <div className="flex-1 min-w-0">
@@ -169,7 +169,7 @@ export function PaymentsView({ selectedProperty, onPropertyChange }: Props) {
                         )}
                       </div>
                       <div className="flex items-center gap-3 text-[10px] text-muted mt-0.5">
-                        <span>{t.building} — {t.unit}</span>
+                        <span>{t.building}, {t.unit}</span>
                         <span>${t.monthlyRent.toLocaleString()}/mo</span>
                         {t.lastPayment && <span>Last: {new Date(t.lastPayment).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</span>}
                       </div>
@@ -199,7 +199,7 @@ export function PaymentsView({ selectedProperty, onPropertyChange }: Props) {
               {filteredPayments.slice(0, 8).map((p) => {
                 const tenant = filteredTenants.find((t) => t.id === p.tenantId)
                 return (
-                  <div key={p.id} className="flex items-center gap-3 p-2.5 rounded-xl bg-white/[0.02] border border-border">
+                  <div key={p.id} className="flex items-center gap-3 p-2.5 rounded-xl bg-black/[0.025] border border-border">
                     <div className="w-8 h-8 rounded-lg bg-green/10 border border-green/20 flex items-center justify-center flex-shrink-0">
                       <CreditCard className="w-3.5 h-3.5 text-green" />
                     </div>

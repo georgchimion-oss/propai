@@ -107,7 +107,7 @@ export function TriageView({ onComplete }: TriageViewProps) {
         </div>
 
         {/* Progress Bar */}
-        <div className="mt-5 h-1.5 bg-white/5 rounded-full overflow-hidden">
+        <div className="mt-5 h-1.5 bg-black/5 rounded-full overflow-hidden">
           <div
             className="h-full bg-gradient-to-r from-teal to-gold rounded-full transition-all duration-500 ease-out"
             style={{
@@ -117,7 +117,7 @@ export function TriageView({ onComplete }: TriageViewProps) {
         </div>
       </div>
 
-      {/* Result Cards — only show when complete */}
+      {/* Result Cards, only show when complete */}
       {complete && (
         <div className="space-y-4 animate-fade-in">
           {/* Classification Card */}
@@ -194,7 +194,7 @@ export function TriageView({ onComplete }: TriageViewProps) {
             </div>
             <div className="mt-4 p-3 rounded-xl bg-green/5 border border-green/15">
               <p className="text-xs text-green font-medium">
-                ✓ Vendor notified — estimated arrival in 45 minutes
+                ✓ Vendor notified, estimated arrival in 45 minutes
               </p>
             </div>
           </div>

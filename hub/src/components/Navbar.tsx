@@ -22,7 +22,7 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled ? 'bg-navy-deep/95 backdrop-blur-xl border-b border-border shadow-lg shadow-black/20' : 'bg-navy-deep/40 backdrop-blur-md'
+        scrolled ? 'bg-navy-deep/95 backdrop-blur-xl border-b border-border shadow-lg shadow-black/10' : 'bg-navy-deep/70 backdrop-blur-md'
       }`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between py-4 px-6 lg:px-8">
@@ -50,14 +50,14 @@ const Navbar = () => {
                     target={mod.live ? '_blank' : undefined}
                     rel={mod.live ? 'noopener noreferrer' : undefined}
                     className={`flex items-center justify-between px-4 py-2.5 text-sm font-sans transition-colors ${
-                      mod.live ? 'text-foreground hover:bg-white/5 cursor-pointer' : 'text-muted cursor-default'
+                      mod.live ? 'text-foreground hover:bg-black/5 cursor-pointer' : 'text-muted cursor-default'
                     }`}
                   >
                     <span>Vestia {mod.name}</span>
                     {mod.live ? (
                       <span className="text-[9px] font-semibold px-1.5 py-0.5 rounded-full bg-green/15 text-green border border-green/25">LIVE</span>
                     ) : (
-                      <span className="text-[9px] font-semibold px-1.5 py-0.5 rounded-full bg-white/5 text-muted-fg border border-border">SOON</span>
+                      <span className="text-[9px] font-semibold px-1.5 py-0.5 rounded-full bg-black/5 text-muted-fg border border-border">SOON</span>
                     )}
                   </a>
                 ))}
@@ -73,7 +73,7 @@ const Navbar = () => {
           </a>
         </div>
 
-        <button className="gradient-gold text-background font-sans text-sm font-semibold px-6 py-2.5 rounded-md hover:brightness-110 transition-all duration-300 active:scale-[0.97] tracking-wide">
+        <button className="gradient-gold text-ink font-sans text-sm font-semibold px-6 py-2.5 rounded-md hover:brightness-110 transition-all duration-300 active:scale-[0.97] tracking-wide">
           Request Demo
         </button>
       </div>

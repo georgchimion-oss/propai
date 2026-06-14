@@ -15,7 +15,7 @@ const MarketSection = () => {
     <section ref={ref} className="relative py-24 lg:py-32 overflow-hidden">
       <div className="absolute inset-0">
         <img src={marketImg} alt="Miami Beach condo row aerial view" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-background/85" />
+        <div className="absolute inset-0 bg-background/45" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">

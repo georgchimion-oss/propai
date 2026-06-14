@@ -18,11 +18,11 @@ const categoryIcons: Record<string, string> = {
 }
 
 function getCategoryIconClass(category: string): string {
-  return categoryIcons[category] ?? 'bg-white/5 border-border text-muted-fg'
+  return categoryIcons[category] ?? 'bg-black/5 border-border text-muted-fg'
 }
 
 function getCategoryBadgeClass(category: string): string {
-  return categoryColors[category] ?? 'text-muted-fg bg-white/5 border-border'
+  return categoryColors[category] ?? 'text-muted-fg bg-black/5 border-border'
 }
 
 export function TemplatesView() {

@@ -61,7 +61,7 @@ function CreditGauge({ score }: { score: number }) {
       </div>
       <div className={`font-serif text-4xl font-bold ${color} mb-1`}>{score}</div>
       <div className="text-xs text-muted-fg mb-4">{label} · Range 300–850</div>
-      <div className="h-2 bg-white/5 rounded-full overflow-hidden">
+      <div className="h-2 bg-black/5 rounded-full overflow-hidden">
         <div
           className={`h-full rounded-full transition-all duration-700 ${trackColor}`}
           style={{ width: `${pct}%` }}
@@ -176,7 +176,7 @@ export function ScreeningView({ selectedApplicationId, selectedProperty, onBack 
                 className={`px-3 py-1.5 rounded-lg text-xs font-medium border transition-all ${
                   activeAppId === a.id
                     ? 'bg-purple/15 text-purple border-purple/25'
-                    : 'bg-card/50 text-muted-fg border-border hover:text-foreground hover:bg-white/5'
+                    : 'bg-card/50 text-muted-fg border-border hover:text-foreground hover:bg-black/5'
                 }`}
               >
                 {a.applicantName} · {a.unit}
@@ -341,7 +341,7 @@ export function ScreeningView({ selectedApplicationId, selectedProperty, onBack 
                 </div>
               </div>
 
-              <div className="h-2 bg-white/5 rounded-full overflow-hidden mb-4">
+              <div className="h-2 bg-black/5 rounded-full overflow-hidden mb-4">
                 <div
                   className={`h-full rounded-full transition-all duration-700 ${riskBarColor}`}
                   style={{ width: `${displayApp.aiRiskScore}%` }}

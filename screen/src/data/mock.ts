@@ -7,7 +7,7 @@ export const properties: Property[] = [
 ]
 
 export const applications: Application[] = [
-  // Bayshore Towers — 6 applicants
+  // Bayshore Towers, 6 applicants
   {
     id: 'APP-001',
     propertyId: 'bayshore',
@@ -79,12 +79,12 @@ export const applications: Application[] = [
       criminal: 'clear',
       eviction: 'flag',
       employment: 'verified',
-      evictionDetail: 'Eviction filing in 2023 — Broward County, judgment satisfied',
+      evictionDetail: 'Eviction filing in 2023, Broward County, judgment satisfied',
     },
     aiRiskLevel: 'high',
     aiRiskScore: 84,
     aiReasoning:
-      'Credit score of 512 falls below the 600 minimum threshold. Income-to-rent ratio of 1.7x is insufficient — does not meet the 2.5x minimum. Prior eviction filing in 2023 with satisfied judgment still elevates risk. Denial recommended.',
+      'Credit score of 512 falls below the 600 minimum threshold. Income-to-rent ratio of 1.7x is insufficient, does not meet the 2.5x minimum. Prior eviction filing in 2023 with satisfied judgment still elevates risk. Denial recommended.',
     employerName: 'Self-employed',
     yearsEmployed: 1,
     priorEvictions: 1,
@@ -133,7 +133,7 @@ export const applications: Application[] = [
       criminal: 'flag',
       eviction: 'clear',
       employment: 'pending',
-      criminalDetail: 'Misdemeanor charge 2019 — dismissed',
+      criminalDetail: 'Misdemeanor charge 2019, dismissed',
     },
     aiRiskLevel: 'medium',
     aiRiskScore: 55,
@@ -171,7 +171,7 @@ export const applications: Application[] = [
     priorEvictions: 0,
   },
 
-  // Coconut Grove Residences — 4 applicants
+  // Coconut Grove Residences, 4 applicants
   {
     id: 'APP-007',
     propertyId: 'coconut',
@@ -221,7 +221,7 @@ export const applications: Application[] = [
     aiRiskLevel: 'medium',
     aiRiskScore: 42,
     aiReasoning:
-      'Acceptable credit score of 658. Income-to-rent ratio of 2.4x is slightly below the 2.5x threshold based on current income. Employment pending — applicant has accepted new role starting April 1. Background checks clear. Medium risk pending employment confirmation.',
+      'Acceptable credit score of 658. Income-to-rent ratio of 2.4x is slightly below the 2.5x threshold based on current income. Employment pending, applicant has accepted new role starting April 1. Background checks clear. Medium risk pending employment confirmation.',
     employerName: 'Chewy (start date pending)',
     yearsEmployed: 0,
     priorEvictions: 0,
@@ -243,8 +243,8 @@ export const applications: Application[] = [
       criminal: 'flag',
       eviction: 'flag',
       employment: 'unverified',
-      criminalDetail: 'Felony conviction 2021 — theft, sentence completed',
-      evictionDetail: 'Two eviction judgments 2022 and 2023 — outstanding balances',
+      criminalDetail: 'Felony conviction 2021, theft, sentence completed',
+      evictionDetail: 'Two eviction judgments 2022 and 2023, outstanding balances',
     },
     aiRiskLevel: 'high',
     aiRiskScore: 96,
@@ -282,7 +282,7 @@ export const applications: Application[] = [
     priorEvictions: 0,
   },
 
-  // Sunridge Palms — 5 applicants
+  // Sunridge Palms, 5 applicants
   {
     id: 'APP-011',
     propertyId: 'sunridge',
@@ -327,12 +327,12 @@ export const applications: Application[] = [
       criminal: 'clear',
       eviction: 'pending',
       employment: 'verified',
-      evictionDetail: 'Records search in progress — prior county not yet returned',
+      evictionDetail: 'Records search in progress, prior county not yet returned',
     },
     aiRiskLevel: 'medium',
     aiRiskScore: 47,
     aiReasoning:
-      'Moderate credit score of 643. Income-to-rent ratio of 2.7x meets requirements. Employment verified. Eviction history check still pending from prior county — process cannot be completed until returned. Screening paused pending final records.',
+      'Moderate credit score of 643. Income-to-rent ratio of 2.7x meets requirements. Employment verified. Eviction history check still pending from prior county, process cannot be completed until returned. Screening paused pending final records.',
     employerName: 'Publix Corporate',
     yearsEmployed: 3,
     priorEvictions: 0,
@@ -386,7 +386,7 @@ export const applications: Application[] = [
     aiRiskLevel: 'medium',
     aiRiskScore: 51,
     aiReasoning:
-      'Credit score of 619 is near the lower acceptable range. Income-to-rent ratio of 2.46x is marginally below the 2.5x threshold. Employment tenure is short at 1.5 years. Clean background and eviction history. Borderline profile — requires board determination.',
+      'Credit score of 619 is near the lower acceptable range. Income-to-rent ratio of 2.46x is marginally below the 2.5x threshold. Employment tenure is short at 1.5 years. Clean background and eviction history. Borderline profile, requires board determination.',
     employerName: 'Walgreens Distribution Center',
     yearsEmployed: 1,
     priorEvictions: 0,
@@ -413,7 +413,7 @@ export const applications: Application[] = [
     aiRiskLevel: 'low',
     aiRiskScore: 24,
     aiReasoning:
-      'Good credit score of 688. Income-to-rent ratio of 3.2x well above minimum. Stable employment at major homebuilder. All background checks clear. Low-risk profile — screening in progress.',
+      'Good credit score of 688. Income-to-rent ratio of 3.2x well above minimum. Stable employment at major homebuilder. All background checks clear. Low-risk profile, screening in progress.',
     employerName: 'Lennar Corporation',
     yearsEmployed: 4,
     priorEvictions: 0,

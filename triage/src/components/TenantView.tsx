@@ -97,7 +97,7 @@ export function TenantView({ onTriageStart, selectedProperty, onPropertyChange }
     const newMsg: ChatMessage = {
       id: `user-${Date.now()}`,
       role: 'tenant',
-      content: '📸 Photo uploaded — bathroom ceiling leak',
+      content: '📸 Photo uploaded, bathroom ceiling leak',
       timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
     }
     setMessages((prev) => [...prev, newMsg])
@@ -141,7 +141,7 @@ export function TenantView({ onTriageStart, selectedProperty, onPropertyChange }
           </div>
         </div>
         <p className="text-sm text-muted-fg leading-relaxed">
-          Report a maintenance issue below. Our AI will assess urgency, match the right vendor, and create a work order — typically in under 60 seconds.
+          Report a maintenance issue below. Our AI will assess urgency, match the right vendor, and create a work order, typically in under 60 seconds.
         </p>
       </div>
 
@@ -189,7 +189,7 @@ export function TenantView({ onTriageStart, selectedProperty, onPropertyChange }
                     <button
                       key={option}
                       onClick={() => handleOptionClick(option)}
-                      className="px-3 py-1.5 rounded-full text-xs font-medium bg-white/5 border border-border text-foreground hover:bg-gold/10 hover:border-gold/30 hover:text-gold transition-all"
+                      className="px-3 py-1.5 rounded-full text-xs font-medium bg-black/5 border border-border text-foreground hover:bg-gold/10 hover:border-gold/30 hover:text-gold transition-all"
                     >
                       {option}
                     </button>
@@ -237,8 +237,8 @@ export function TenantView({ onTriageStart, selectedProperty, onPropertyChange }
 
       {/* Input Bar */}
       <div className="sticky bottom-4">
-        <div className="flex items-center gap-2 bg-card border border-border rounded-2xl p-2 shadow-xl shadow-black/20">
-          <button className="p-2.5 rounded-xl text-muted-fg hover:text-foreground hover:bg-white/5 transition-colors">
+        <div className="flex items-center gap-2 bg-card border border-border rounded-2xl p-2 shadow-xl shadow-gray-300/60">
+          <button className="p-2.5 rounded-xl text-muted-fg hover:text-foreground hover:bg-black/5 transition-colors">
             <Upload className="w-5 h-5" />
           </button>
           <input

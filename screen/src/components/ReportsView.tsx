@@ -156,7 +156,7 @@ export function ReportsView({ selectedProperty, onPropertyChange }: ReportsViewP
                         <span className={`text-xs font-medium ${cfg.text}`}>{statusLabels[s]}</span>
                         <span className="text-xs text-muted-fg">{count} ({pct}%)</span>
                       </div>
-                      <div className="h-2 bg-white/5 rounded-full overflow-hidden">
+                      <div className="h-2 bg-black/5 rounded-full overflow-hidden">
                         <div
                           className={`h-full rounded-full transition-all duration-700 ${cfg.fill}`}
                           style={{ width: `${pct}%` }}
@@ -203,7 +203,7 @@ export function ReportsView({ selectedProperty, onPropertyChange }: ReportsViewP
         <div className="bg-card/50 border border-border rounded-2xl p-5">
           <div className="flex items-center gap-2 mb-5">
             <Hourglass className="w-4 h-4 text-purple" />
-            <span className="text-xs font-medium text-muted-fg uppercase tracking-wide">All Properties — Approval Rate Comparison</span>
+            <span className="text-xs font-medium text-muted-fg uppercase tracking-wide">All Properties, Approval Rate Comparison</span>
           </div>
           <div className="flex flex-col gap-4">
             {allProperties.map((p) => (
@@ -227,7 +227,7 @@ export function ReportsView({ selectedProperty, onPropertyChange }: ReportsViewP
                     </span>
                   </div>
                 </div>
-                <div className="h-2 bg-white/5 rounded-full overflow-hidden">
+                <div className="h-2 bg-black/5 rounded-full overflow-hidden">
                   <div
                     className={`h-full rounded-full transition-all duration-700 ${p.id === selectedProperty ? 'bg-purple' : 'bg-muted'}`}
                     style={{ width: `${(p.approvalRate / maxRate) * 100}%` }}
@@ -243,7 +243,7 @@ export function ReportsView({ selectedProperty, onPropertyChange }: ReportsViewP
           <Clock className="w-4 h-4 text-purple flex-shrink-0" />
           <p className="text-sm text-muted-fg">
             <span className="text-foreground font-medium">Average screening time: 1.8 business days</span>
-            {' '}— Automated credit and background checks run instantly. Manual board review adds 1–2 days for borderline cases.
+            {' '}- Automated credit and background checks run instantly. Manual board review adds 1–2 days for borderline cases.
           </p>
         </div>
       </div>

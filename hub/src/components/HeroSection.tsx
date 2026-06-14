@@ -13,7 +13,7 @@ const HeroSection = () => {
           alt="Miami Beach luxury condos at sunset"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-transparent" />
       </div>
 
       {/* Content */}
@@ -36,7 +36,7 @@ const HeroSection = () => {
           </h1>
 
           <p className="font-sans text-lg lg:text-xl text-muted-fg max-w-2xl mb-10 leading-relaxed">
-            Six AI modules purpose-built for South Florida condo associations. From maintenance triage to compliance tracking — one platform, zero spreadsheets.
+            Six AI modules purpose-built for South Florida condo associations. From maintenance triage to compliance tracking, one platform, zero spreadsheets.
           </p>
 
           {/* Stat pills */}
@@ -53,7 +53,7 @@ const HeroSection = () => {
 
           {/* CTAs */}
           <div className="flex flex-wrap gap-4">
-            <button className="gradient-gold text-background font-sans font-semibold px-8 py-3.5 rounded-md hover:brightness-110 transition-all duration-300 active:scale-[0.97] text-sm tracking-wide">
+            <button className="gradient-gold text-ink font-sans font-semibold px-8 py-3.5 rounded-md hover:brightness-110 transition-all duration-300 active:scale-[0.97] text-sm tracking-wide">
               See the Platform
             </button>
             <button className="border border-foreground/30 text-foreground font-sans font-medium px-8 py-3.5 rounded-md hover:bg-foreground/5 transition-all duration-300 active:scale-[0.97] text-sm tracking-wide">

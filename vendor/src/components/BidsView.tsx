@@ -23,7 +23,7 @@ function StarRating({ rating }: { rating: number }) {
               ? 'fill-gold text-gold'
               : i === full + 1 && half
               ? 'fill-gold/50 text-gold'
-              : 'text-white/15 fill-white/5'
+              : 'text-black/20 fill-black/5'
           }`}
         />
       ))}
@@ -41,7 +41,7 @@ function ScoreBar({ score }: { score: number }) {
       : 'bg-red'
   return (
     <div className="flex items-center gap-2">
-      <div className="flex-1 h-1.5 bg-white/8 rounded-full overflow-hidden">
+      <div className="flex-1 h-1.5 bg-black/8 rounded-full overflow-hidden">
         <div
           className={`h-full rounded-full transition-all duration-500 ${colorClass}`}
           style={{ width: `${score}%` }}
@@ -73,7 +73,7 @@ export function BidsView({ selectedProperty, onPropertyChange, selectedRFPId, on
 
   const [expandedBid, setExpandedBid] = useState<string | null>(null)
 
-  // Cost comparison data — sort by amount
+  // Cost comparison data, sort by amount
   const chartBids = [...rfpBids].sort((a, b) => a.amount - b.amount)
   const maxAmount = Math.max(...chartBids.map(b => b.amount), 1)
 
@@ -84,7 +84,7 @@ export function BidsView({ selectedProperty, onPropertyChange, selectedRFPId, on
       {/* Header */}
       <div className="mb-6">
         <h1 className="font-serif text-3xl font-semibold text-foreground mb-1">Bid Comparison</h1>
-        <p className="text-sm text-muted-fg">AI-scored bid analysis — select an RFP to compare submitted bids</p>
+        <p className="text-sm text-muted-fg">AI-scored bid analysis, select an RFP to compare submitted bids</p>
       </div>
 
       {/* RFP Selector */}
@@ -103,7 +103,7 @@ export function BidsView({ selectedProperty, onPropertyChange, selectedRFPId, on
                 className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-all duration-150 ${
                   activeRFPId === r.id
                     ? 'bg-orange/15 text-orange border border-orange/25'
-                    : 'text-muted-fg hover:text-foreground hover:bg-white/5'
+                    : 'text-muted-fg hover:text-foreground hover:bg-black/5'
                 }`}
               >
                 {r.title.length > 40 ? r.title.slice(0, 40) + '…' : r.title}
@@ -149,10 +149,10 @@ export function BidsView({ selectedProperty, onPropertyChange, selectedRFPId, on
                         {bid.vendorName.length > 22 ? bid.vendorName.slice(0, 22) + '…' : bid.vendorName}
                       </div>
                       <div className="flex-1 flex items-center gap-2">
-                        <div className="flex-1 h-6 bg-white/5 rounded-lg overflow-hidden relative">
+                        <div className="flex-1 h-6 bg-black/5 rounded-lg overflow-hidden relative">
                           <div
                             className={`h-full rounded-lg transition-all duration-500 ${
-                              bid.recommended ? 'bg-orange/40' : 'bg-white/10'
+                              bid.recommended ? 'bg-orange/40' : 'bg-black/10'
                             }`}
                             style={{ width: `${(bid.amount / maxAmount) * 100}%` }}
                           />
@@ -209,11 +209,11 @@ export function BidsView({ selectedProperty, onPropertyChange, selectedRFPId, on
 
                       {/* Stats Grid */}
                       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
-                        <div className="bg-navy-mid/50 rounded-xl p-3">
+                        <div className="bg-navy-mid rounded-xl p-3">
                           <div className="text-xs text-muted-fg mb-1">AI Score</div>
                           <ScoreBar score={bid.aiScore} />
                         </div>
-                        <div className="bg-navy-mid/50 rounded-xl p-3">
+                        <div className="bg-navy-mid rounded-xl p-3">
                           <div className="text-xs text-muted-fg mb-1">Insurance</div>
                           <div className={`flex items-center gap-1 text-sm font-medium ${bid.insuranceVerified ? 'text-green' : 'text-red'}`}>
                             {bid.insuranceVerified
@@ -222,7 +222,7 @@ export function BidsView({ selectedProperty, onPropertyChange, selectedRFPId, on
                             }
                           </div>
                         </div>
-                        <div className="bg-navy-mid/50 rounded-xl p-3">
+                        <div className="bg-navy-mid rounded-xl p-3">
                           <div className="text-xs text-muted-fg mb-1">License</div>
                           <div className={`flex items-center gap-1 text-sm font-medium ${bid.licensed ? 'text-green' : 'text-red'}`}>
                             {bid.licensed
@@ -231,13 +231,13 @@ export function BidsView({ selectedProperty, onPropertyChange, selectedRFPId, on
                             }
                           </div>
                         </div>
-                        <div className="bg-navy-mid/50 rounded-xl p-3">
+                        <div className="bg-navy-mid rounded-xl p-3">
                           <div className="text-xs text-muted-fg mb-1">Submitted</div>
                           <div className="text-sm font-medium text-foreground">{bid.submittedDate}</div>
                         </div>
                       </div>
 
-                      {/* AI Reasoning — expandable */}
+                      {/* AI Reasoning, expandable */}
                       <button
                         onClick={() => setExpandedBid(expandedBid === bid.id ? null : bid.id)}
                         className="flex items-center gap-1.5 text-xs text-muted-fg hover:text-foreground transition-colors mb-1"

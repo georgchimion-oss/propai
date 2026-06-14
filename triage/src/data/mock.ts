@@ -199,7 +199,7 @@ export const demoConversation: ChatMessage[] = [
   {
     id: 'm3',
     role: 'ai',
-    content: "I understand — water leaks can be stressful. Let me ask a few questions to assess this properly.\n\nHow would you describe the flow?",
+    content: "I understand, water leaks can be stressful. Let me ask a few questions to assess this properly.\n\nHow would you describe the flow?",
     timestamp: '10:31 AM',
     options: ['Slow drip', 'Steady stream', 'Pooling on floor', 'Only when upstairs runs water'],
   },
@@ -225,7 +225,7 @@ export const demoConversation: ChatMessage[] = [
   {
     id: 'm7',
     role: 'ai',
-    content: "⚠️ A bulging ceiling with active water flow is a **high-priority issue** — it could collapse if not addressed. I'm escalating this now.\n\nCan you take a photo of the affected area? This helps our plumber prepare before arriving.",
+    content: "⚠️ A bulging ceiling with active water flow is a **high-priority issue**, it could collapse if not addressed. I'm escalating this now.\n\nCan you take a photo of the affected area? This helps our plumber prepare before arriving.",
     timestamp: '10:33 AM',
     showUpload: true,
   },
@@ -240,12 +240,12 @@ export const demoTriageResult: TriageResult = {
   reasoning: 'Active water leak with ceiling deformation indicates burst or cracked pipe in unit above. Bulging ceiling poses collapse risk. Immediate intervention required to prevent structural water damage and potential mold formation.',
   steps: [
     'Analyzing issue description and photos...',
-    'Categorizing: Plumbing — Active Water Leak',
-    'Assessing severity: CRITICAL — structural risk',
+    'Categorizing: Plumbing, Active Water Leak',
+    'Assessing severity: CRITICAL, structural risk',
     'Checking vendor availability...',
     'Matching: RapidFlow Plumbing (4.8★, < 2hr response)',
     'Generating work order WO-2024-009',
     'Notifying property manager',
-    'Dispatching vendor — ETA 45 minutes',
+    'Dispatching vendor, ETA 45 minutes',
   ],
 }
