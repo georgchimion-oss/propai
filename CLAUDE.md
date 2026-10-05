@@ -15,7 +15,7 @@ The opportunity: Property management scores 27/30 on PwC's AI Disruption Index f
 
 ## Current State
 
-**Hub site**: Lovable-generated React app (Vite + React + TS + Tailwind). Located at `vestia/hub/`. Design is finalized — dark luxury theme with gold/teal accents, real Miami photography, scroll animations. Needs: strip unused deps (shadcn bloat), deploy.
+**Hub site**: Lovable-generated React app (Vite + React + TS + Tailwind). Located at `vestia/hub/`. LIGHT luxury theme (converted from dark 2026-06-12 per the no-dark-themes rule; palette notes below are stale on this point), gold/teal accents, real Miami photography, scroll animations. Hero rebuilt 2026-08-25: vivid photo with precision scrims (`.hero-scrim-x/y`), Ken Burns drift, staggered load-in; mobile scrim variant + fixed-nav clearance (`pt-28 lg:pt-0`).
 
 **Clean rebuild also exists** at `vestia/hub/` (Vite + React + Tailwind v4 + Lucide, no bloat). Visually matches Lovable per Playwright screenshots. Can use either.
 

@@ -69,3 +69,22 @@ h1, h2, h3, h4, h5, h6 {
   transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
               transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
+/* Hero: editorial split — photo stays pure, only a feathered seam into the panel */
+.hero-seam-x {
+  background: linear-gradient(to right, var(--color-background), transparent);
+}
+.hero-seam-y {
+  background: linear-gradient(to top, var(--color-background), transparent);
+}
+@keyframes kenburns {
+  from { transform: scale(1.02); }
+  to   { transform: scale(1.1); }
+}
+.animate-kenburns {
+  animation: kenburns 28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: transform;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-kenburns { animation: none; }
+}
