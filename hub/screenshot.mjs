@@ -1,6 +1,6 @@
 import { chromium } from 'playwright';
 
-const browser = await chromium.launch();
+const browser = await chromium.launch({ chromiumSandbox: true });
 
 // Lovable reference
 const p1 = await browser.newPage({ viewport: { width: 1440, height: 900 } });

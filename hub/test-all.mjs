@@ -291,7 +291,7 @@ async function testCollect(browser) {
 }
 
 (async () => {
-  const browser = await chromium.launch();
+  const browser = await chromium.launch({ chromiumSandbox: true });
   try {
     await testHub(browser);
     await testTriage(browser);

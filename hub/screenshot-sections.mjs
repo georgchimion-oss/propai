@@ -1,6 +1,6 @@
 import { chromium } from 'playwright';
 
-const browser = await chromium.launch();
+const browser = await chromium.launch({ chromiumSandbox: true });
 const sections = ['hero', 'problem', 'modules', 'howitworks', 'market', 'compliance', 'social', 'cta', 'footer'];
 
 for (const [label, port] of [['lovable', 8080], ['rebuild', 8082]]) {
